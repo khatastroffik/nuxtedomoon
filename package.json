@@ -28,5 +28,12 @@
     "k11k"
   ],
   "author": "khatastroffik",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/khatastroffik/nuxtedomoon.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/khatastroffik/treefolder/issues"
+  }
 }
