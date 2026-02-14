@@ -1,23 +1,18 @@
 {
   "name": "nuxtedomoon",
   "type": "module",
-  "private": true,
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "typecheck": "nuxt typecheck",
-    "prepare": "nuxt prepare"
-  },
-  "dependencies": {
-    "nuxt": "^4.3.1",
-    "vue": "^3.5.28",
-    "vue-router": "^4.6.4"
-  },
   "version": "1.0.0",
+  "private": true,
   "description": "Nuxtedo-Moon is a portfolio/blog Nuxt template designed using Nuxt-Content, Tailwind CSS and daisyUI",
+  "author": "khatastroffik",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/khatastroffik/nuxtedomoon.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/khatastroffik/treefolder/issues"
+  },
   "keywords": [
     "typescript",
     "Nuxt",
@@ -29,16 +24,26 @@
     "daisyUI",
     "k11k"
   ],
-  "author": "khatastroffik",
-  "license": "MIT",
-  "repository": {
-    "url": "https://github.com/khatastroffik/nuxtedomoon.git",
-    "type": "git"
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck",
+    "prepare": "nuxt prepare",
+    "lint": "eslint .",
+    "lintix": "eslint . --fix"
   },
-  "bugs": {
-    "url": "https://github.com/khatastroffik/treefolder/issues"
+  "dependencies": {
+    "nuxt": "^4.3.1",
+    "vue": "^3.5.28",
+    "vue-router": "^4.6.4"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^7.4.3",
+    "eslint": "^9.39.2",
+    "eslint-plugin-format": "^1.4.0",
     "typescript": "^5.9.3",
     "vue-tsc": "^3.2.4"
   }
