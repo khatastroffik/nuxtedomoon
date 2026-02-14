@@ -1,6 +1,6 @@
 # Nuxtedo-Moon
 
-**Nuxtedo-Moon** is a *portfolio/blog Nuxt template* designed using Nuxt-Content, Tailwind CSS and daisyUI.
+**Nuxtedo-Moon** is a _portfolio/blog Nuxt template_ designed using Nuxt-Content, Tailwind CSS and daisyUI.
 
 ## Nuxt Standard Information
 
