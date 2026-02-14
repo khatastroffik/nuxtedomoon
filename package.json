@@ -7,7 +7,9 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck",
+    "prepare": "nuxt prepare"
   },
   "dependencies": {
     "nuxt": "^4.3.1",
@@ -35,5 +37,9 @@
   },
   "bugs": {
     "url": "https://github.com/khatastroffik/treefolder/issues"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vue-tsc": "^3.2.4"
   }
 }
