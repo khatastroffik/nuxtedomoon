@@ -15,8 +15,7 @@ export default antfu({
     "vue/max-attributes-per-line": ["error", { singleline: { max: 2 }, multiline: { max: 1 } }],
     "no-console": ["warn"],
     "antfu/no-top-level-await": ["off"],
-    "unicorn/filename-case": ["error", { case: "kebabCase", ignore: ["README.md"] }],
-    // "perfectionist/sort-imports": ["error", { tsconfigRootDir: "." }],
+    "unicorn/filename-case": ["error", { case: "kebabCase", ignore: ["README.md", "CHANGELOG.md"] }],
   },
   ignores: ["CHANGELOG.md", ".pnpm-store/**", "**/migrations/*"],
 });

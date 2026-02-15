@@ -5,3 +5,5 @@ trustPolicy: no-downgrade
 onlyBuiltDependencies:
   - "@parcel/watcher"
   - esbuild
+  - better-sqlite3
+  - sqlite3
