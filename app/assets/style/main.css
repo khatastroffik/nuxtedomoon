@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 h1 {
   @apply text-lime-900 font-extrabold text-4xl rounded-2xl border p-4 m-8;
