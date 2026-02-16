@@ -6,3 +6,5 @@ description: Some more details about K11K here ...
 # The About khatastroffik Info page
 
 Some information about _khatastroffik_
+
+[Home](/)

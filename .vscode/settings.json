@@ -9,6 +9,11 @@
     "source.organizeImports": "never"
   },
 
+  // Tailwind CSS
+  "files.associations": { "*.css": "tailwindcss" },
+  "editor.quickSuggestions": { "strings": true },
+  "tailwindCSS.experimental.configFile": ".nuxt/tailwind/postcss.mjs",
+
   // Silent the stylistic rules in your IDE, but still auto fix them
   "eslint.rules.customizations": [
     { "rule": "style/*", "severity": "off", "fixable": true },

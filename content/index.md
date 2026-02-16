@@ -6,3 +6,5 @@ description: Some details here ...
 # Initial landing page
 
 Just a very simple landing page
+
+[About](/about)
