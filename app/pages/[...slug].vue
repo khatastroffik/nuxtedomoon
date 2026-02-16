@@ -16,5 +16,8 @@ useSeoMeta({
 </script>
 
 <template>
+  <NuxtLink class="btn btn-xs btn-info btn-dash" to="/">
+    &larr; go home
+  </NuxtLink>
   <ContentRenderer v-if="page" :value="page" />
 </template>

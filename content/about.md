@@ -7,4 +7,6 @@ description: Some more details about K11K here ...
 
 Some information about _khatastroffik_
 
-[Home](/)
+::NuxtLink{to="/" class="btn btn-outline"}
+go to "home" page
+::

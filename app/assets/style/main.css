@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+@plugin "daisyui" {
+  themes:
+    light --default,
+    dark --prefersdark;
+  root: ":root";
+  include:;
+  exclude:;
+  prefix:;
+  logs: true;
+}
+
 h1 {
-  @apply text-lime-900 font-extrabold text-4xl rounded-2xl border p-4 m-8;
+  @apply text-[#32cd32] m-8 rounded-2xl border p-4 text-4xl font-extrabold;
 }

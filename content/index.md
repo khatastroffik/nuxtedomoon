@@ -7,4 +7,6 @@ description: Some details here ...
 
 Just a very simple landing page
 
-[About](/about)
+::NuxtLink{to="/about" class="btn btn-outline"}
+go to "about" page
+::
