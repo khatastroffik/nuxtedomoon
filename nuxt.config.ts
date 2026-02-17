@@ -26,4 +26,5 @@ export default defineNuxtConfig({
     // @ts-expect-error plugin's interface is (currently) faulty (see https://github.com/tailwindlabs/tailwindcss/issues/18802)
     plugins: [tailwindcss()],
   },
+  eslint: { config: { standalone: false } },
 });
