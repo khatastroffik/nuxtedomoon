@@ -1,7 +1,12 @@
+import { dirname } from "node:path";
+import { fileURLToPath } from "node:url";
 import antfu from "@antfu/eslint-config";
+import format from "eslint-plugin-format";
+import tailwindcss from "eslint-plugin-tailwindcss";
 
 export default antfu(
   {
+    root: true,
     formatters: true,
     vue: true,
     type: "app",
@@ -24,5 +29,29 @@ export default antfu(
       "antfu/no-top-level-await": ["off"],
       "unicorn/filename-case": ["error", { case: "kebabCase", ignore: ["README.md", "CHANGELOG.md"] }],
     },
+  },
+  {
+    files: ["app/**/*.css"],
+    languageOptions: {
+      parser: format.parserPlain,
+    },
+    plugins: {
+      format,
+    },
+    rules: {
+      "format/prettier": ["error", { parser: "css", tabWidth: 2 }],
+    },
+  },
+  {
+    files: ["app/**/*.vue"],
+    name: "tailwindcss",
+    plugins: { tailwindcss },
+    settings: {
+      tailwindcss: {
+        config: `${dirname(fileURLToPath(import.meta.url))}/app/assets/style/main.css`,
+        tags: ["tw"],
+      },
+    },
+    rules: tailwindcss.configs["flat/recommended"][1].rules,
   },
 );
