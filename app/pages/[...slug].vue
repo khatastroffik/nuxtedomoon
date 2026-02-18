@@ -21,15 +21,15 @@ const test = tw`btn btn-dash btn-xs btn-info`;
 </script>
 
 <template>
-  <div class="navbar bg-neutral px-4 text-neutral-content">
-    <div class="navbar-start ">
-      <!-- <NuxtLink class="btn btn-dash btn-xs btn-info" to="/"> -->
-      <NuxtLink :class="test" to="/">
-        &larr; go home
-      </NuxtLink>
+  <div class="navbar bg-base-200 px-4 text-neutral-content">
+    <div class="navbar-start">
+      <Brand />
     </div>
     <div class="navbar-end">
-      String Template value: <code class="ml-2 border border-accent-content px-2 text-accent-content">{{ test }}</code>
+      <div :class="test">
+        String Template value:
+      </div>
+      <code class="ml-2 border border-accent-content bg-primary px-2 text-primary-content">{{ test }}</code>
     </div>
   </div>
   <ContentRenderer v-if="page" :value="page" />
