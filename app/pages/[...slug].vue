@@ -1,4 +1,6 @@
 <script setup lang="ts">
+defineOgImage();
+
 const route = useRoute();
 
 const { data: page } = await useAsyncData(`page-${route.path}`, () => {

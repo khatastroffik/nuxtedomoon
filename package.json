@@ -37,10 +37,12 @@
     "lintix": "eslint . --fix",
     "dry-commit": "git hook run pre-commit",
     "cleanup": "nuxt cleanup",
-    "reset": "nuxt cleanup && pnpx rimraf .nuxt .output .data dist node_modules && pnpm install"
+    "reset": "nuxt cleanup && pnpx rimraf .nuxt .output .data dist node_modules && pnpm install",
+    "ninfo": "nuxt info"
   },
   "dependencies": {
     "@nuxt/content": "^3.11.2",
+    "@nuxtjs/seo": "3.4.0",
     "@tailwindcss/vite": "^4.1.18",
     "better-sqlite3": "^12.6.2",
     "daisyui": "^5.5.18",

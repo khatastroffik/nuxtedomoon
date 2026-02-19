@@ -6,7 +6,7 @@ trustPolicyExclude:
   - koa@2.16.3
 
 onlyBuiltDependencies:
-  - "@parcel/watcher"
-  - esbuild
+  - "@parcel/watcher@2.5.6"
+  - esbuild@0.27.3
   - better-sqlite3
   - sqlite3

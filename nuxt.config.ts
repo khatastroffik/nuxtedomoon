@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   typescript: { typeCheck: false }, // https://github.com/fi3ework/vite-plugin-checker/issues/557
-  modules: ["@nuxt/content"],
+  modules: ["@nuxtjs/seo", "@nuxt/content"],
   css: ["~/assets/style/main.css"],
   content: {
     watch: {
@@ -27,4 +27,42 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
   eslint: { config: { standalone: false } },
+  // SITE-CONFIG
+  site: {
+    url: "https://khatastroffik.github.io",
+    name: "KhatastroffiK World",
+    defaultLocale: "en",
+  },
+  // ROBOTS
+  robots: {
+    disallow: [],
+    groups: [
+      { userAgent: ["GPTBot", "ChatGPT-User"], disallow: ["/"] },
+    ],
+  },
+  // OG-IMAGE
+  ogImage: {
+    // zeroRuntime: true,
+    defaults: {
+      component: "NuxtSeo",
+    },
+  },
+  // SCHEMA-ORG
+  schemaOrg: {
+    identity: {
+      type: "Person",
+      name: "Loïs Bégué",
+      // image: '/avatar.jpg',
+      url: "https://khatastroffik.github.io",
+    },
+  },
+  // LINK-CHECKER
+  linkChecker: {
+    failOnError: true,
+    // generate reports
+    report: {
+      html: true,
+      markdown: true,
+    },
+  },
 });
