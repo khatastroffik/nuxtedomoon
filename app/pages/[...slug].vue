@@ -34,5 +34,8 @@ const test = tw`btn btn-dash btn-xs btn-info`;
       <code class="ml-2 border border-accent-content bg-primary px-2 text-primary-content">{{ test }}</code>
     </div>
   </div>
-  <ContentRenderer v-if="page" :value="page" />
+  <ContentRenderer
+    v-if="page"
+    :value="page"
+    class="prose prose-base" />
 </template>
