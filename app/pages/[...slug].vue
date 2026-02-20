@@ -19,7 +19,7 @@ useSeoMeta({
 function tw(strings: any, ...values: any[]) {
   return String.raw({ raw: strings }, ...values);
 }
-const test = tw`btn btn-dash btn-xs btn-info`;
+const test = tw`btn btn-dash btn-md btn-info`;
 </script>
 
 <template>
@@ -29,7 +29,10 @@ const test = tw`btn btn-dash btn-xs btn-info`;
     </div>
     <div class="navbar-end">
       <div :class="test">
-        String Template value:
+        <Icon
+          name="tabler:armchair"
+          size="18"
+          class="text-accent hover:text-accent-content" /> String Template value:
       </div>
       <code class="ml-2 border border-accent-content bg-primary px-2 text-primary-content">{{ test }}</code>
     </div>

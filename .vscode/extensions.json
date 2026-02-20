@@ -5,6 +5,7 @@
     "bradlc.vscode-tailwindcss",
     "redhat.vscode-yaml",
     "gruntfuggly.todo-tree",
-    "dbaeumer.vscode-eslint"
+    "dbaeumer.vscode-eslint",
+    "antfu.iconify"
   ]
 }
