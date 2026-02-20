@@ -34,7 +34,12 @@ const test = tw`btn btn-dash btn-md btn-info`;
           size="18"
           class="text-accent hover:text-accent-content" /> String Template value:
       </div>
-      <code class="ml-2 border border-accent-content bg-primary px-2 text-primary-content">{{ test }}</code>
+      <code class="mr-2 ml-2 border border-accent-content bg-primary px-2 text-primary-content">{{ test }}</code>
+      <div class="avatar">
+        <div class="w-8 rounded-full ring-2 ring-primary ring-offset-2 ring-offset-base-100">
+          <NuxtImg preset="avatar" src="/avatar.jpg" />
+        </div>
+      </div>
     </div>
   </div>
   <ContentRenderer

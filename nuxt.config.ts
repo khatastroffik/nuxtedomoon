@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   typescript: { typeCheck: false }, // https://github.com/fi3ework/vite-plugin-checker/issues/557
-  modules: ["@nuxtjs/seo", "@nuxt/content", "@nuxt/icon"],
+  modules: ["@nuxtjs/seo", "@nuxt/content", "@nuxt/icon", "@nuxt/image"],
   css: ["~/assets/style/main.css"],
   content: {
     watch: {
@@ -68,5 +68,17 @@ export default defineNuxtConfig({
   icon: {
     mode: "css",
     cssLayer: "base",
+  },
+  image: {
+    format: ["webp"],
+    presets: {
+      avatar: {
+        modifiers: {
+          format: "jpg",
+          width: 50,
+          height: 50,
+        },
+      },
+    },
   },
 });

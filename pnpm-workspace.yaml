@@ -4,9 +4,10 @@ trustPolicy: no-downgrade
 
 trustPolicyExclude:
   - koa@2.16.3
-
 onlyBuiltDependencies:
   - "@parcel/watcher@2.5.6"
-  - esbuild@0.27.3
   - better-sqlite3
+  - esbuild@0.27.3
+  - sharp
+  - sharp@0.34.5
   - sqlite3
