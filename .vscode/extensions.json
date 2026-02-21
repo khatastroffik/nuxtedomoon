@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "qwtel.sqlite-viewer",
+    "nuxtr.nuxt-vscode-extentions",
+    "bradlc.vscode-tailwindcss",
+    "redhat.vscode-yaml",
+    "gruntfuggly.todo-tree",
+    "dbaeumer.vscode-eslint",
+    "antfu.iconify"
+  ]
+}

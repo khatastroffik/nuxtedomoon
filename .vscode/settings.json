@@ -9,6 +9,12 @@
     "source.organizeImports": "never"
   },
 
+  // Tailwind CSS
+  "files.associations": { "*.css": "tailwindcss" },
+  "editor.quickSuggestions": { "strings": "on" },
+  "tailwindCSS.classAttributes": ["class", ":class"],
+  "tailwindCSS.classFunctions": ["tw"],
+
   // Silent the stylistic rules in your IDE, but still auto fix them
   "eslint.rules.customizations": [
     { "rule": "style/*", "severity": "off", "fixable": true },
@@ -21,6 +27,7 @@
     { "rule": "*-newline", "severity": "off", "fixable": true },
     { "rule": "*quotes", "severity": "off", "fixable": true },
     { "rule": "*semi", "severity": "off", "fixable": true }
+
   ],
 
   // Enable eslint for all supported languages
