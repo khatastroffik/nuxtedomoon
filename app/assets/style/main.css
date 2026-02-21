@@ -1,19 +1,49 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
-
 @plugin "daisyui" {
-  themes:
-    light --default,
-    dark --prefersdark;
-  root: ":root";
-  include:;
-  exclude:;
-  prefix:;
+  themes: false;
   logs: false;
+}
+@source "../../../content/**/*.md";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: false;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: oklch(98% 0.003 209.5);
+  --color-base-200: oklch(92% 0.013 245.3);
+  --color-base-300: oklch(86% 0.022 252.894);
+  --color-base-content: oklch(27% 0.041 260.031);
+  --color-primary: oklch(87% 0.169 91.605);
+  --color-primary-content: oklch(26% 0.065 152.934);
+  --color-secondary: oklch(80% 0.105 251.813);
+  --color-secondary-content: oklch(28% 0.141 291.089);
+  --color-accent: oklch(85% 0.138 181.071);
+  --color-accent-content: oklch(27% 0.046 192.524);
+  --color-neutral: oklch(27% 0.041 260.031);
+  --color-neutral-content: oklch(96% 0.007 247.896);
+  --color-info: oklch(74% 0.16 232.661);
+  --color-info-content: oklch(100% 0 0);
+  --color-success: oklch(84% 0.238 128.85);
+  --color-success-content: oklch(26% 0.051 172.552);
+  --color-warning: oklch(75% 0.183 55.934);
+  --color-warning-content: oklch(98% 0.022 95.277);
+  --color-error: oklch(63% 0.237 25.331);
+  --color-error-content: oklch(98% 0.022 95.277);
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
 }
 
 @plugin "daisyui/theme" {
-  name: "nuxtedomoon-dark";
+  name: "dark";
   default: true;
   prefersdark: true;
   color-scheme: "dark";
@@ -45,14 +75,4 @@
   --border: 1px;
   --depth: 1;
   --noise: 0;
-}
-
-.k {
-  @apply inline-block;
-}
-.k11k {
-  font-family:
-    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, "Arial Narrow Bold", Verdana, sans-serif;
-  @apply inline font-extrabold text-3xl capitalize;
 }
