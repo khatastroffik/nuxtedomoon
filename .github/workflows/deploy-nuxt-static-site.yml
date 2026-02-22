@@ -20,7 +20,7 @@ jobs:
   build:
     name: ==> BUILD STATIC SITE <==
     environment:
-      name: github-pages    
+      name: github-pages
     runs-on: ubuntu-latest
     steps:
       - name: == 1/6 == Checkout ========================================

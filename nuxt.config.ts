@@ -1,5 +1,8 @@
 import tailwindcss from "@tailwindcss/vite";
 
+// eslint-disable-next-line node/prefer-global/process
+const NUXT_APP_BASE_URL = process.env.NUXT_APP_BASE_URL ?? "";
+
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
@@ -29,12 +32,17 @@ export default defineNuxtConfig({
   eslint: { config: { standalone: false } },
   // SITE-CONFIG
   site: {
-    url: "https://khatastroffik.github.io/nuxtedomoon/",
+    url: "https://khatastroffik.github.io",
     name: "KhatastroffiK World",
     defaultLocale: "en",
   },
+  // SITEMAP
+  sitemap: {
+    zeroRuntime: true,
+  },
   // ROBOTS
   robots: {
+    robotsTxt: !(NUXT_APP_BASE_URL.length > 1),
     disallow: [],
     groups: [
       { userAgent: ["GPTBot", "ChatGPT-User"], disallow: ["/"] },
@@ -53,7 +61,7 @@ export default defineNuxtConfig({
       type: "Person",
       name: "Loïs Bégué",
       // image: '/avatar.jpg',
-      url: "https://khatastroffik.github.io/nuxtedomoon/",
+      url: "https://khatastroffik.github.io",
     },
   },
   // LINK-CHECKER
