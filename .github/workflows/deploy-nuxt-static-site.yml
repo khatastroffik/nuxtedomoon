@@ -64,7 +64,7 @@ jobs:
       #     static_site_generator: nuxt
 
       - name: Generate static site (HTML export) with Nuxt
-        run: pnpm run generate
+        run: NUXT_APP_BASE_URL=/nuxtedomoon/ pnpm run generate
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
