@@ -7,7 +7,7 @@ const isDark = computed({
 </script>
 
 <template>
-  <label class="swap swap-rotate">
+  <label class="swap swap-rotate hover:text-accent">
     <input v-model="isDark" type="checkbox">
     <Icon name="tabler:sun" class="swap-off" />
     <Icon name="tabler:moon" class="swap-on" />
