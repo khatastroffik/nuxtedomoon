@@ -3,7 +3,7 @@ name: Deploy static Nuxt site to GH-Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
+    branches: [main]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -17,7 +17,7 @@ permissions:
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
 
 jobs:
@@ -34,13 +34,13 @@ jobs:
         with:
           version: 10
           run_install: false
-        
+
       - name: Setup Node v24
         uses: actions/setup-node@v6
         with:
-          node-version: '24'
-          cache: 'pnpm'
-          
+          node-version: "24"
+          cache: pnpm
+
       # - name: Restore cache
       #   uses: actions/cache@v4
       #   with:
@@ -62,10 +62,10 @@ jobs:
       #     #
       #     # You may remove this line if you want to manage the configuration yourself.
       #     static_site_generator: nuxt
-      
+
       - name: Generate static site (HTML export) with Nuxt
         run: pnpm run generate
-        
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

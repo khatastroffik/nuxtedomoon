@@ -29,7 +29,7 @@ export default defineNuxtConfig({
   eslint: { config: { standalone: false } },
   // SITE-CONFIG
   site: {
-    url: "https://khatastroffik.github.io",
+    url: "https://khatastroffik.github.io/nuxtedomoon/",
     name: "KhatastroffiK World",
     defaultLocale: "en",
   },
@@ -53,7 +53,7 @@ export default defineNuxtConfig({
       type: "Person",
       name: "Loïs Bégué",
       // image: '/avatar.jpg',
-      url: "https://khatastroffik.github.io",
+      url: "https://khatastroffik.github.io/nuxtedomoon/",
     },
   },
   // LINK-CHECKER
