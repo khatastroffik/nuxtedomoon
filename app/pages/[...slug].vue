@@ -15,17 +15,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="navbar bg-base-200 px-4 ">
-    <div class="navbar-start">
-      <Brand />
-    </div>
-    <div class="navbar-end gap-4">
-      <ThemeSwap />
-      <Avatar />
-    </div>
+  <div class="rounded-lg border border-base-300 bg-base-100 p-4">
+    <ContentRenderer v-if="page" :value="page" />
   </div>
-  <ContentRenderer
-    v-if="page"
-    :value="page"
-    class="prose prose-base" />
 </template>
