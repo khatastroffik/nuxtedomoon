@@ -5,7 +5,7 @@ const { data: page } = await useAsyncData(`page-${route.path}`, () => {
   return queryCollection("pages").path(route.path).first();
 });
 if (!page.value) {
-  throw createError({ statusCode: 404, statusMessage: "Page not found" });
+  throw createError({ statusCode: 404, statusText: "Page not found" });
 }
 
 useSeoMeta({

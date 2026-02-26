@@ -16,7 +16,7 @@ export default antfu(
       quotes: "double",
       semi: true,
     },
-    ignores: ["CHANGELOG.md", ".pnpm-store/**", "**/migrations/*"],
+    ignores: ["CHANGELOG.md", ".pnpm-store/**", "**/migrations/*", ".github/ISSUE_TEMPLATE/**"],
   },
   {
     rules: {
