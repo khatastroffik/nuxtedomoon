@@ -21,7 +21,7 @@ export default antfu(
   {
     rules: {
       "ts/no-redeclare": "off",
-      "vue/max-attributes-per-line": ["error", { singleline: { max: 2 }, multiline: { max: 1 } }],
+      "vue/max-attributes-per-line": ["error", { singleline: { max: 3 }, multiline: { max: 1 } }],
       "vue/html-closing-bracket-newline": ["error", { singleline: "never", multiline: "never" }],
       "vue/html-indent": ["error", 2, { attribute: 1, baseIndent: 1, closeBracket: 0, alignAttributesVertically: true, ignores: [] }],
       // "vue/singleline-html-element-content-newline": ["error", { ignoreWhenNoAttributes: false, ignoreWhenEmpty: true }],
