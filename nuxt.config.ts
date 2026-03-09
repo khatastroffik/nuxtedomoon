@@ -1,7 +1,11 @@
 import tailwindcss from "@tailwindcss/vite";
+import { defineNuxtConfig } from "nuxt/config";
 
 // eslint-disable-next-line node/prefer-global/process
 const NUXT_APP_BASE_URL = process.env.NUXT_APP_BASE_URL ?? "";
+
+const _url = "https://khatastroffik.github.io";
+const _logo = `/apple-icon-144x144.png`;
 
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
@@ -10,73 +14,46 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/seo", "@nuxt/content", "@nuxt/icon", "@nuxt/image", "@nuxtjs/color-mode"],
   css: ["~/assets/style/main.css"],
   content: {
-    watch: {
-      enabled: true,
-    },
-    renderer: {
-      anchorLinks: { h2: true, h3: true, h4: false },
-    },
-    build: {
-      markdown: {
-        toc: {
-          depth: 3,
-          searchDepth: 3,
-        },
-      },
-    },
+    watch: { enabled: true },
+    renderer: { anchorLinks: { h2: true, h3: true, h4: false } },
+    build: { markdown: { toc: { depth: 3, searchDepth: 3 } } },
   },
-  vite: {
-    // @ts-expect-error plugin's interface is (currently) faulty (see https://github.com/tailwindlabs/tailwindcss/issues/18802)
-    plugins: [tailwindcss()],
-  },
+  // @ts-expect-error plugin's interface is (currently) faulty (see https://github.com/tailwindlabs/tailwindcss/issues/18802)
+  vite: { plugins: [tailwindcss()] },
   eslint: { config: { standalone: false } },
   // SITE-CONFIG
   site: {
-    url: "https://khatastroffik.github.io",
-    name: "KhatastroffiK World",
+    url: _url,
+    name: "K11K",
     defaultLocale: "en",
+    logo: _logo,
   },
   // SITEMAP
-  sitemap: {
-    zeroRuntime: true,
-  },
+  sitemap: { zeroRuntime: true },
   // ROBOTS
   robots: {
     robotsTxt: !(NUXT_APP_BASE_URL.length > 1),
     disallow: [],
-    groups: [
-      { userAgent: ["GPTBot", "ChatGPT-User"], disallow: ["/"] },
-    ],
+    groups: [{ userAgent: ["GPTBot", "ChatGPT-User"], disallow: ["/"] }],
   },
   // OG-IMAGE
   ogImage: {
-    // zeroRuntime: true,
-    defaults: {
-      component: "NuxtSeo",
-    },
+    zeroRuntime: true,
+    defaults: { component: "NuxtSeo" },
+    compatibility: { prerender: { chromium: false } }, // disable chromium dependency for prerendering (skips the chromium install in CIs)
   },
   // SCHEMA-ORG
   schemaOrg: {
     identity: {
       type: "Person",
       name: "Loïs Bégué",
-      // image: '/avatar.jpg',
-      url: "https://khatastroffik.github.io",
+      image: "/avatar.jpg",
+      url: _url,
     },
   },
   // LINK-CHECKER
-  linkChecker: {
-    failOnError: true,
-    // generate reports
-    report: {
-      html: true,
-      markdown: true,
-    },
-  },
-  icon: {
-    mode: "css",
-    cssLayer: "base",
-  },
+  linkChecker: { failOnError: true },
+  icon: { mode: "css", cssLayer: "base" },
   image: {
     format: ["webp"],
     presets: {
