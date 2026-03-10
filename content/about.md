@@ -1,6 +1,8 @@
 ---
-title: K11K About
-description: Some more details about K11K here ...
+title: About me & KhatastroffiK
+description: Some more details about me and K11K ...
+menuLabel: About
+menuPosition: 100
 sitemap:
   lastmod: 2026-02-19
   changefreq: weekly

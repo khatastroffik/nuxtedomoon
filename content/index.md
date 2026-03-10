@@ -1,6 +1,8 @@
 ---
-title: K11K Home Page
-description: Some details here ...
+title: KhatastroffiK Portfolio
+description: Some astonishing information on the khatastroffik portfolio...
+menuLabel: Home
+menuPosition: 1
 sitemap:
   lastmod: 2026-02-19
   changefreq: weekly
