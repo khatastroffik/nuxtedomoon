@@ -1,8 +1,8 @@
-<script setup lang="ts">
-const route = useRoute();
+<script lang="ts" setup>
+const path = "/projects";
 
-const { data: page } = await useAsyncData(`page-${route.path}`, () => {
-  return queryCollection("pages").path(route.path).first();
+const { data: page } = await useAsyncData(`page-${path}`, () => {
+  return queryCollection("pages").path(path).first();
 });
 
 if (!page.value) {
@@ -10,7 +10,7 @@ if (!page.value) {
 }
 
 const ogImagePath = computed(() => {
-  return `/__og-image__/static${route.path === "/" ? "" : route.path}/og.png`;
+  return `/__og-image__/static${path}/og.png`;
 });
 
 defineOgImage();
@@ -22,15 +22,13 @@ useSeoMeta({
   twitterTitle: page.value.title,
   twitterDescription: page.value.description,
   twitterImage: ogImagePath,
-
 });
+
 useHead({ link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }] });
 </script>
 
 <template>
-  <ContentRenderer
-    v-if="page"
-    :value="page"
-    class="rounded-lg border border-base-300 bg-base-100 p-4"
-    tag="main" />
+  <div class="rounded-lg border border-base-300 bg-base-100 p-4">
+    <ContentRenderer v-if="page" :value="page" />
+  </div>
 </template>

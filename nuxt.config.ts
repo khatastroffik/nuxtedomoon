@@ -8,6 +8,9 @@ const _url = "https://khatastroffik.github.io";
 const _logo = `/apple-icon-144x144.png`;
 
 export default defineNuxtConfig({
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
+  },
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   typescript: { typeCheck: false }, // https://github.com/fi3ework/vite-plugin-checker/issues/557
@@ -39,7 +42,7 @@ export default defineNuxtConfig({
   // OG-IMAGE
   ogImage: {
     // zeroRuntime: true,
-    defaults: { component: "NuxtSeo" },
+    defaults: { component: "k11k" },
     compatibility: { prerender: { chromium: false } }, // disable chromium dependency for prerendering (skips the chromium install in CIs)
   },
   // SCHEMA-ORG
