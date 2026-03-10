@@ -1,8 +1,7 @@
 <script lang="ts" setup>
 const breadcrumbs = useBreadcrumbItems();
-const host = useRequestURL().origin;
-function getCurrentUrl(path: string = "") {
-  return new URL(path, host).href;
+function getCurrentUrl() {
+  return withSiteUrl(useRoute().fullPath, { withBase: true }).value;
 }
 </script>
 
@@ -15,7 +14,7 @@ function getCurrentUrl(path: string = "") {
           {{ item.label }}
         </NuxtLink>
         <template v-if="index > 0 && index === breadcrumbs.length - 1">
-          <CopyToClipboard class="ml-2 h-2.5 w-2.5 opacity-55" :val="getCurrentUrl(item.to)" />
+          <CopyToClipboard class="ml-2 h-2.5 w-2.5 opacity-55" :val="getCurrentUrl()" />
         </template>
       </li>
     </ul>
