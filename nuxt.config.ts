@@ -2,7 +2,7 @@ import tailwindcss from "@tailwindcss/vite";
 import { defineNuxtConfig } from "nuxt/config";
 
 // eslint-disable-next-line node/prefer-global/process
-const NUXT_APP_BASE_URL = process.env.NUXT_APP_BASE_URL ?? "/";
+const NUXT_APP_BASE_URL = process.env.NUXT_APP_BASE_URL ?? "";
 
 const _url = "https://khatastroffik.github.io";
 const _logo = `/apple-icon-144x144.png`;
@@ -38,7 +38,7 @@ export default defineNuxtConfig({
   },
   // OG-IMAGE
   ogImage: {
-    zeroRuntime: true,
+    // zeroRuntime: true,
     defaults: { component: "NuxtSeo" },
     compatibility: { prerender: { chromium: false } }, // disable chromium dependency for prerendering (skips the chromium install in CIs)
   },
