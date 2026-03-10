@@ -9,8 +9,4 @@ sitemap:
 
 # The About khatastroffik Info page
 
-Some information about _khatastroffik_
-
-::NuxtLink{to="/" class="btn btn-outline"}
-go to "home" page
-::
+Some information about me and _khatastroffik_.

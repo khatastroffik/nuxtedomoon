@@ -9,8 +9,4 @@ sitemap:
 
 # Initial landing page
 
-Just a very simple landing page
-
-::NuxtLink{to="/about" class="btn btn-outline"}
-go to "about" page
-::
+Just a very simple Portfolio landing page

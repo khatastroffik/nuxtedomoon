@@ -1,11 +1,13 @@
 <script setup lang="ts">
 defineOgImage();
 const route = useRoute();
+
 const { data: page } = await useAsyncData(`page-${route.path}`, () => {
   return queryCollection("pages").path(route.path).first();
 });
+
 if (!page.value) {
-  throw createError({ statusCode: 404, statusText: "Page not found" });
+  throw createError({ statusCode: 404, statusText: "Page not found", fatal: true });
 }
 
 useSeoMeta({
@@ -15,7 +17,9 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="rounded-lg border border-base-300 bg-base-100 p-4">
-    <ContentRenderer v-if="page" :value="page" />
-  </div>
+  <ContentRenderer
+    v-if="page"
+    :value="page"
+    class="rounded-lg border border-base-300 bg-base-100 p-4"
+    tag="main" />
 </template>
