@@ -9,9 +9,9 @@ async function onCopy() {
 </script>
 
 <template>
-  <Icon
-    v-if="isSupported"
-    :name="copied ? 'tabler:check' : 'tabler:copy'"
-    :disabled="copied"
-    @click.prevent="onCopy" />
+  <ClientOnly>
+    <template v-if="isSupported && val">
+      <Icon :name="copied ? 'tabler:check' : 'tabler:copy'" :disabled="copied" @click.prevent="onCopy" />
+    </template>
+  </ClientOnly>
 </template>
