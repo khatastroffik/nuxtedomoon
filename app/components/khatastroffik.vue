@@ -3,9 +3,9 @@ defineProps({ short: { type: Boolean, default: false, required: false } });
 </script>
 
 <template>
-  <div class="inline-flex">
-    <div class="rotate-y-180">K</div>
-    <div v-if="short">IIK</div>
-    <div v-else>hatastroffiK</div>
-  </div>
+  <span class="inline-flex">
+    <span class="rotate-y-180">K</span>
+    <span v-if="short">IIK</span>
+    <span v-else>hatastroffiK</span>
+  </span>
 </template>
