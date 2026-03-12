@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 const route = useRoute();
 
 const { data: page } = await useAsyncData(`page-${route.path}`, () => {
@@ -8,6 +8,8 @@ const { data: page } = await useAsyncData(`page-${route.path}`, () => {
 if (!page.value) {
   throw createError({ statusCode: 404, statusText: "Page not found", fatal: true });
 }
+
+useSurroundings(queryCollectionItemSurroundings("pages", route.path, { fields: ["menuPosition", "menuLabel"] }).order("menuPosition", "ASC"));
 
 const ogImagePath = computed(() => {
   return `/__og-image__/static${route.path === "/" ? "" : route.path}/og.png`;
@@ -22,8 +24,8 @@ useSeoMeta({
   twitterTitle: page.value.title,
   twitterDescription: page.value.description,
   twitterImage: ogImagePath,
-
 });
+
 useHead({ link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }] });
 </script>
 

@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 const { data: pages } = await useAsyncData("pages-list", () => {
   return queryCollectionNavigation("pages", ["menuPosition", "menuLabel"]).order("menuPosition", "ASC");
-  // return queryCollection("pages").order("menuPosition", "ASC").all();
 });
 
 function isActiveParent(itemPath: string, routePath: string) {

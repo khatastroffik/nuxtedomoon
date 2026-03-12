@@ -9,6 +9,8 @@ if (!page.value) {
   throw createError({ statusCode: 404, statusText: "Page not found", fatal: true });
 }
 
+useSurroundings(queryCollectionItemSurroundings("projects", route.path));
+
 const ogImagePath = computed(() => {
   return `/__og-image__/static${route.path === "/" ? "" : route.path}/og.png`;
 });
