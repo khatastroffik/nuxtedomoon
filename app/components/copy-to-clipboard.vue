@@ -11,7 +11,20 @@ async function onCopy() {
 <template>
   <ClientOnly>
     <template v-if="isSupported && val">
-      <Icon :name="copied ? 'tabler:check' : 'tabler:copy'" :disabled="copied" @click.prevent="onCopy" />
+      <div>
+        <div class="tooltip absolute tooltip-bottom z-100">
+          <div class="tooltip-content z-100">
+            <div class="text-sm font-light text-white/70 italic inline-max">
+              {{ copied ? "copied" : "copy link to clipboard" }}
+            </div>
+          </div>
+          <Icon
+            class="ml-2 h-2.5 w-2.5 opacity-55"
+            :name="copied ? 'tabler:check' : 'tabler:copy'"
+            :disabled="copied"
+            @click.prevent="onCopy" />
+        </div>
+      </div>
     </template>
   </ClientOnly>
 </template>
