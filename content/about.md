@@ -12,3 +12,9 @@ sitemap:
 # :descramble[&ldquo;About KhatastroffiK&rdquo;] Info Page
 
 Some information about me and _khatastroffik_.
+
+## Components Playground
+
+### Daily Quote
+
+:DailyQuote

@@ -18,6 +18,7 @@ export default defineContentConfig({
 
       }),
     }),
+
     articles: defineCollection({
       type: "page",
       source: "articles/*.md",
@@ -45,6 +46,20 @@ export default defineContentConfig({
           priority: z.number(),
         }),
 
+      }),
+    }),
+
+    quotes: defineCollection({
+      type: "data",
+      source: "quotes.json",
+      schema: z.object({
+        quotes: z.array(
+          z.object({
+            quote: z.string(),
+            author: z.string(),
+            cite: z.string().optional(),
+          }),
+        ),
       }),
     }),
 
