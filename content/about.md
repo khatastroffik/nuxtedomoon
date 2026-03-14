@@ -9,6 +9,6 @@ sitemap:
   priority: 0.8
 ---
 
-# The About khatastroffik Info page
+# :descramble[&ldquo;About KhatastroffiK&rdquo;] Info Page
 
 Some information about me and _khatastroffik_.
