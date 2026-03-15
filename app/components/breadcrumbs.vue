@@ -65,5 +65,21 @@ watchDebounced(
 Character Information:
 - Left Double Quotation Mark (U+201C) :: &ldquo;
 - Right Double Quotation Mark (U+201D) :: &rdquo;
+
 - Narrow No-Break Space (U+202F) :: &#x202F;
+
+- left-pointing double angle quotation mark (U+00AB)
+- right-pointing double angle quotation mark (U+00BB)
+
+- Reference Mark (U+203B) :: &#x203B;
+
+- modifier letter low tilde (U+02F7) :: &#x02F7;
+
+- combining tilde below (U+0330)
+
+- modifier letter begin low tone (U+02FB) :: &#x02FB;
+- modifier letter end low tone (U+02FC) :: &#x02FC;
+
+- single left-pointing angle quotation mark (U+2039) :: &#x2039;
+- single right-pointing angle quotation mark (U+203A) :: &#x203A;
 -->
