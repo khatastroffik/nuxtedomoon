@@ -60,6 +60,13 @@ export default defineNuxtConfig({
   image: {
     format: ["webp"],
     presets: {
+      landing: {
+        modifiers: {
+          format: "jpg",
+          width: 200,
+          height: 200,
+        },
+      },
       avatar: {
         modifiers: {
           format: "jpg",
