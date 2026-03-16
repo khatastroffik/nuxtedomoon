@@ -49,7 +49,7 @@ jobs:
           NUXT_APP_BASE_URL: ${{vars.NUXT_APP_BASE_URL}}
 
       - name: == 6/6 == Upload artifact =================================
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./.output/public
 
