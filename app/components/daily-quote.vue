@@ -4,7 +4,7 @@ const { data } = await useAsyncData(`quotes`, () => {
 });
 const today = new Date().toISOString().slice(0, 10).replace(/\D/g, "");
 const quotes = data.value?.quotes ?? [];
-const quoteIndex = (Number.parseInt(today) - 1) % quotes.length;
+const quoteIndex = Number.parseInt(today) % quotes.length;
 const quote = quotes.at(quoteIndex);
 </script>
 
