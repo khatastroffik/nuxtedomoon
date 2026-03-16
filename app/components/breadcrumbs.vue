@@ -31,7 +31,7 @@ watchDebounced(
             {{ item.label }}
           </NuxtLink>
           <template v-if="index > 0 && item.current">
-            <CopyToClipboard class="ml-2 h-2.5 w-2.5 opacity-55" :val="getCurrentUrl()" />
+            <CopyToClipboard :val="getCurrentUrl()" />
           </template>
         </li>
       </ul>
