@@ -11,6 +11,9 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: "page", mode: "out-in" },
   },
+  routeRules: {
+    "/": { appLayout: false }, // Landing Page specific setting !
+  },
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   typescript: { typeCheck: false }, // https://github.com/fi3ework/vite-plugin-checker/issues/557

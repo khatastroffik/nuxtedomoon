@@ -1,15 +1,26 @@
 <script lang="ts" setup>
 const route = useRoute();
+const { collectionQuery, surroundingsQuery } = computed(() =>
+  route.path === "/projects"
+    ? {
+        collectionQuery: queryCollection("pages").path(route.path).first(),
+        surroundingsQuery: queryCollectionItemSurroundings("pages", route.path, { fields: ["menuPosition", "menuLabel"] }).order("menuPosition", "ASC"),
+      }
+    : {
+        collectionQuery: queryCollection("projects").path(route.path).first(),
+        surroundingsQuery: queryCollectionItemSurroundings("projects", route.path),
+      },
+).value;
 
-const { data: page } = await useAsyncData(`project-${route.path}`, () => {
-  return queryCollection("projects").path(route.path).first();
+const { data: page } = await useAsyncData(`projects-${route.path}`, () => {
+  return collectionQuery;
 });
 
 if (!page.value) {
   throw createError({ statusCode: 404, statusText: "Page not found", fatal: true });
 }
 
-useSurroundings(queryCollectionItemSurroundings("projects", route.path));
+useSurroundings(surroundingsQuery);
 
 const ogImagePath = computed(() => {
   return `/__og-image__/static${route.path === "/" ? "" : route.path}/og.png`;
@@ -30,7 +41,5 @@ useHead({ link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }] })
 </script>
 
 <template>
-  <div class="rounded-lg border border-base-300 bg-base-100 p-4">
-    <ContentRenderer v-if="page" :value="page" />
-  </div>
+  <ContentRenderer v-if="page" :value="page" tag="main" />
 </template>

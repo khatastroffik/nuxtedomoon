@@ -30,9 +30,5 @@ useHead({ link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }] })
 </script>
 
 <template>
-  <ContentRenderer
-    v-if="page"
-    :value="page"
-    class="rounded-lg border border-base-300 bg-base-100 p-4"
-    tag="main" />
+  <ContentRenderer v-if="page" :value="page" tag="main" />
 </template>
