@@ -10,7 +10,7 @@
       </h2>
       <h2 class="text-4xl font-extrabold text-accent md:text-5xl lg:text-6xl xl:text-7xl">+</h2>
     </div>
-    <h4 class="text-center text-2xl text-ellipsis xl:text-end xl:text-3xl">
+    <h4 class="text-center text-xl xl:text-end xl:text-2xl">
       <slot name="description" />
     </h4>
   </div>
