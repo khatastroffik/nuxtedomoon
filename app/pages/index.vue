@@ -63,7 +63,7 @@
 
       <!-- DIVIDER - STATS -->
       <Divider>Stats</Divider>
-      <div class="inline-flex w-full max-w-7xl justify-evenly gap-2">
+      <div class="flex w-full max-w-7xl flex-wrap justify-evenly gap-2">
         <StatsCard>
           <template #value>25</template>
           <template #description>Years of Experience</template>
