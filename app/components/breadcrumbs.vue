@@ -39,7 +39,7 @@ watchDebounced(
     <div class="inline-flex w-1/4 items-center justify-end gap-2 px-2">
       <template v-if="prevLinkTo || nextLinkTo">
         <div class="tooltip tooltip-bottom z-100">
-          <div v-if="prevLinkTo" class="tooltip-content">
+          <div v-if="prevLinkTo" class="tooltip-content translate-x-[calc(-50%+.75rem)]">
             <div class="text-sm font-light text-white/70 italic">navigate to</div>
             <p class="mb-2 px-1">&ldquo;&#x202F;{{ prevLinkTo?.title }}&#x202F;&rdquo;</p>
           </div>
@@ -48,7 +48,7 @@ watchDebounced(
           </NuxtLink>
         </div>
         <div class="tooltip tooltip-bottom z-100">
-          <div v-if="nextLinkTo" class="tooltip-content">
+          <div v-if="nextLinkTo" class="tooltip-content translate-x-[calc(-50%+.75rem)]">
             <div class="text-sm font-light text-white/70 italic">navigate to</div>
             <p class="mb-2 px-1">&laquo;&#x202F;{{ nextLinkTo?.title }}&#x202F;&raquo;</p>
           </div>
