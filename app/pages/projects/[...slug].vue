@@ -1,18 +1,20 @@
 <script lang="ts" setup>
-const route = useRoute();
+const { staticPagePath, ogImagePath } = useStaticPageRoutes();
+const spp = toValue(staticPagePath);
+
 const { collectionQuery, surroundingsQuery } = computed(() =>
-  route.path === "/projects"
+  spp === "/projects"
     ? {
-        collectionQuery: queryCollection("pages").path(route.path).first(),
-        surroundingsQuery: queryCollectionItemSurroundings("pages", route.path, { fields: ["menuPosition", "menuLabel"] }).order("menuPosition", "ASC"),
+        collectionQuery: queryCollection("pages").path(spp).first(),
+        surroundingsQuery: queryCollectionItemSurroundings("pages", spp, { fields: ["menuPosition", "menuLabel"] }).order("menuPosition", "ASC"),
       }
     : {
-        collectionQuery: queryCollection("projects").path(route.path).first(),
-        surroundingsQuery: queryCollectionItemSurroundings("projects", route.path),
+        collectionQuery: queryCollection("projects").path(spp).first(),
+        surroundingsQuery: queryCollectionItemSurroundings("projects", spp),
       },
 ).value;
 
-const { data: page } = await useAsyncData(`projects-${route.path}`, () => {
+const { data: page } = await useAsyncData(`projects-${spp}`, () => {
   return collectionQuery;
 });
 
@@ -21,10 +23,6 @@ if (!page.value) {
 }
 
 useSurroundings(surroundingsQuery);
-
-const ogImagePath = computed(() => {
-  return `/__og-image__/static${route.path === "/" ? "" : route.path}/og.png`;
-});
 
 defineOgImage();
 

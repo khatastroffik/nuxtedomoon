@@ -58,7 +58,7 @@ useHead({ link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }] })
         </div>
         <div id="menu" class="hidden w-full lg:flex lg:w-auto lg:items-center">
           <PagesMenu />
-          <ThemeSwap class="text-base-content hover:text-accent" />
+          <ThemeSwap class="invisible text-base-content hover:text-accent" />
         </div>
       </header>
 

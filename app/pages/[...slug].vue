@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-const route = useRoute();
-const routePath = computed(() => removeTrailingSlash(route.path));
+const { staticPagePath, ogImagePath, originalRoute: route } = useStaticPageRoutes();
+const spp = toValue(staticPagePath);
 
-const { data: page } = await useAsyncData(`page-${routePath.value}`, () => {
-  return queryCollection("pages").path(routePath.value).first();
+const { data: page } = await useAsyncData(`page-${spp}`, () => {
+  return queryCollection("pages").path(spp).first();
 });
 
 if (!page.value) {
@@ -12,14 +12,6 @@ if (!page.value) {
 }
 
 useSurroundings(queryCollectionItemSurroundings("pages", route.path, { fields: ["menuPosition", "menuLabel"] }).order("menuPosition", "ASC"));
-
-const ogImagePath = computed(() => {
-  return `/__og-image__/static${route.path === "/" ? "" : routePath.value}/og.png`;
-});
-// console.warn("OG-IMAGE =", ogImagePath.value);
-// console.warn("PATH     =", route.path);
-// console.warn("FULLPATH =", route.fullPath);
-// console.warn("CLEANPATH =", routePath.value);
 
 defineOgImage();
 
