@@ -39,7 +39,7 @@ watchDebounced(
     <div class="inline-flex w-1/4 items-center justify-end gap-2 px-2">
       <template v-if="prevLinkTo || nextLinkTo">
         <div class="tooltip tooltip-bottom z-100">
-          <div v-if="prevLinkTo" class="tooltip-content">
+          <div v-if="prevLinkTo" class="tooltip-content translate-x-[calc(-50%+.75rem)]">
             <div class="text-sm font-light text-white/70 italic">navigate to</div>
             <p class="mb-2 px-1">&ldquo;&#x202F;{{ prevLinkTo?.title }}&#x202F;&rdquo;</p>
           </div>
@@ -48,7 +48,7 @@ watchDebounced(
           </NuxtLink>
         </div>
         <div class="tooltip tooltip-bottom z-100">
-          <div v-if="nextLinkTo" class="tooltip-content">
+          <div v-if="nextLinkTo" class="tooltip-content translate-x-[calc(-50%+.75rem)]">
             <div class="text-sm font-light text-white/70 italic">navigate to</div>
             <p class="mb-2 px-1">&laquo;&#x202F;{{ nextLinkTo?.title }}&#x202F;&raquo;</p>
           </div>
@@ -65,5 +65,21 @@ watchDebounced(
 Character Information:
 - Left Double Quotation Mark (U+201C) :: &ldquo;
 - Right Double Quotation Mark (U+201D) :: &rdquo;
+
 - Narrow No-Break Space (U+202F) :: &#x202F;
+
+- left-pointing double angle quotation mark (U+00AB)
+- right-pointing double angle quotation mark (U+00BB)
+
+- Reference Mark (U+203B) :: &#x203B;
+
+- modifier letter low tilde (U+02F7) :: &#x02F7;
+
+- combining tilde below (U+0330)
+
+- modifier letter begin low tone (U+02FB) :: &#x02FB;
+- modifier letter end low tone (U+02FC) :: &#x02FC;
+
+- single left-pointing angle quotation mark (U+2039) :: &#x2039;
+- single right-pointing angle quotation mark (U+203A) :: &#x203A;
 -->

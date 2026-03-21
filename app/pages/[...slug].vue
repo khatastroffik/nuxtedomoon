@@ -1,19 +1,17 @@
 <script lang="ts" setup>
-const route = useRoute();
+const { staticPagePath, ogImagePath, originalRoute: route } = useStaticPageRoutes();
+const spp = toValue(staticPagePath);
 
-const { data: page } = await useAsyncData(`page-${route.path}`, () => {
-  return queryCollection("pages").path(route.path).first();
+const { data: page } = await useAsyncData(`page-${spp}`, () => {
+  return queryCollection("pages").path(spp).first();
 });
 
 if (!page.value) {
+  console.error(`Page not found\nPATH=${route.path}\nFULLPATH=${route.fullPath}`);
   throw createError({ statusCode: 404, statusText: "Page not found", fatal: true });
 }
 
 useSurroundings(queryCollectionItemSurroundings("pages", route.path, { fields: ["menuPosition", "menuLabel"] }).order("menuPosition", "ASC"));
-
-const ogImagePath = computed(() => {
-  return `/__og-image__/static${route.path === "/" ? "" : route.path}/og.png`;
-});
 
 defineOgImage();
 
@@ -30,9 +28,5 @@ useHead({ link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }] })
 </script>
 
 <template>
-  <ContentRenderer
-    v-if="page"
-    :value="page"
-    class="rounded-lg border border-base-300 bg-base-100 p-4"
-    tag="main" />
+  <ContentRenderer v-if="page" :value="page" tag="main">no no no</ContentRenderer>
 </template>

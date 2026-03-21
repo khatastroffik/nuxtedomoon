@@ -76,3 +76,26 @@
   --depth: 1;
   --noise: 0;
 }
+
+@layer base {
+  .prose :is(h1, h2, h3, h4) {
+    @apply relative scroll-mt-24;
+  }
+  .prose :is(h1, h2, h3, h4) > a {
+    @apply no-underline! text-inherit! inline-flex! items-center!;
+  }
+  .prose :is(h1, h2, h3, h4) > a::before {
+    content: "#";
+    font-size: medium;
+    @apply absolute -left-4 opacity-0 text-base-content transition-opacity;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 0.5rem;
+  }
+  .prose :is(h1, h2, h3, h4):hover > a::before {
+    @apply opacity-50;
+  }
+}

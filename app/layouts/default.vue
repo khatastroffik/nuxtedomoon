@@ -1,30 +1,23 @@
 <template>
-  <div class="flex min-h-screen min-w-screen flex-col items-center gap-2 bg-base-200 p-4 text-base-content">
-    <div class="navbar z-50 w-full max-w-7xl rounded-lg border border-base-300 bg-base-100 px-4 text-base-100 ">
-      <div class="navbar-start">
-        <Brand />
+  <div class="flex min-h-screen w-full max-w-7xl min-w-screen flex-col items-center gap-2 bg-base-200 px-8 ">
+    <header class="top-0 z-100 mx-auto mt-4 flex h-18 max-h-18 w-full max-w-7xl self-stretch rounded-lg border border-base-300 bg-base-100 p-4 text-base shadow-lg">
+      <div class="flex flex-1 items-center justify-between">
+        <brand />
       </div>
-      <div class="navbar-center text-base-content">
+      <div class="dropdown dropdown-end dropdown-bottom lg:hidden">
+        <div tabindex="0" role="button" class="btn btn-ghost btn-sm hover:text-accent"><Icon name="tabler:menu-2" title="Menu" class="h-6 w-6 stroke-3!" /></div>
+        <PagesMenu tabindex="-1" class="dropdown-content menu absolute z-100 w-36 flex-col rounded-box bg-base-100 p-0 shadow-sm" />
+      </div>
+      <div id="menu" class="not-prose hidden w-full lg:flex lg:w-auto lg:items-center">
         <PagesMenu />
       </div>
+      <ThemeSwap class="text-base-content hover:text-accent" />
+    </header>
 
-      <div class="navbar-end gap-4">
-        <ThemeSwap class="text-base-content hover:text-accent" />
-        <Avatar />
-      </div>
-    </div>
-    <Breadcrumbs class="w-full max-w-7xl border-amber-200" />
-    <div class="prose w-full max-w-7xl flex-1 ">
-      <slot>
-        <BaamOida />
-      </slot>
-    </div>
-
-    <!-- eslint-disable-next-line tailwindcss/no-custom-classname -->
-    <footer class="footer-center footer max-w-7xl p-4 text-base-content sm:footer-horizontal">
-      <aside>
-        <p>Copyright © {{ new Date().getFullYear() }} - All right reserved by Loïs Bégué aka <Khatastroffik class="inline-block" /></p>
-      </aside>
-    </footer>
+    <Breadcrumbs class="z-50" />
+    <Prosit class="min-h-full grow">
+      <slot />
+    </Prosit>
+    <PagesFooter />
   </div>
 </template>
