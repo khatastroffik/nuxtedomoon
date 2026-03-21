@@ -21,6 +21,28 @@ function doScroll(_e?: Event) {
   const opacity = (60 + Math.min(Math.floor(window.scrollY / 12), 40));
   headerRef.value?.style.setProperty("background-color", `color-mix(in oklab, var(--color-base-200) ${opacity}%, transparent)`, "important");
 };
+
+const { data: page } = await useAsyncData("landing", () => {
+  return queryCollection("pages").path("/").first();
+});
+
+if (!page.value) {
+  throw createError({ statusCode: 404, statusText: "Page not found", fatal: true });
+}
+
+const ogImagePath = "/__og-image__/static/og.png";
+defineOgImage();
+
+useSeoMeta({
+  title: page.value.title,
+  description: page.value.description,
+  ogImage: ogImagePath,
+  twitterTitle: page.value.title,
+  twitterDescription: page.value.description,
+  twitterImage: ogImagePath,
+});
+
+useHead({ link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }] });
 </script>
 
 <template>
@@ -36,6 +58,7 @@ function doScroll(_e?: Event) {
         </div>
         <div id="menu" class="hidden w-full lg:flex lg:w-auto lg:items-center">
           <PagesMenu />
+          <ThemeSwap class="text-base-content hover:text-accent" />
         </div>
       </header>
 

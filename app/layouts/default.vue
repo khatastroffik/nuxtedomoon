@@ -9,7 +9,6 @@
       </div>
       <div class="navbar-end gap-4">
         <ThemeSwap class="text-base-content hover:text-accent" />
-        <Avatar />
       </div>
     </header>
     <Breadcrumbs />
