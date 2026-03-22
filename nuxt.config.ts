@@ -21,9 +21,17 @@ export default defineNuxtConfig({
     renderer: { anchorLinks: { h2: true, h3: true, h4: false } },
     build: { markdown: { toc: { depth: 3, searchDepth: 3 } } },
   },
-  // @ts-expect-error plugin's interface is (currently) faulty (see https://github.com/tailwindlabs/tailwindcss/issues/18802)
-  vite: { plugins: [tailwindcss()] },
-  eslint: { config: { standalone: false } },
+  // VITE
+  vite: {
+    plugins: [tailwindcss()],
+    optimizeDeps: {
+      include: [
+        "@vueuse/core",
+        "@nuxtjs/mdc",
+      ],
+    },
+
+  },
   // SITE-CONFIG
   site: {
     url: _url,
