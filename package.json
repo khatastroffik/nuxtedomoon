@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "private": true,
   "packageManager": "pnpm@10.32.1",
-  "description": "Nuxtedo-Moon is a portfolio/blog Nuxt template designed using Nuxt-Content, Tailwind CSS and daisyUI",
+  "description": "Nuxtedo-Moon is a responsive portfolio/blog static web page template designed using Nuxt, Nuxt-Content, Tailwind CSS and daisyUI.",
   "author": "khatastroffik",
   "license": "MIT",
   "repository": {
