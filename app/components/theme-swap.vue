@@ -7,7 +7,7 @@ const isDark = computed({
 </script>
 
 <template>
-  <label class="swap swap-rotate">
+  <label class="swap swap-rotate" :title="isDark ? 'Dark Mode is on. Switch to light mode' : 'Light Mode is on. Switch to dark mode'" aria-label="Theme switcher">
     <input v-model="isDark" type="checkbox">
     <Icon name="tabler:sun" class="swap-off" />
     <Icon name="tabler:moon" class="swap-on" />

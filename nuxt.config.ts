@@ -44,8 +44,8 @@ export default defineNuxtConfig({
   },
   // OG-IMAGE
   ogImage: {
-    // zeroRuntime: true,
-    defaults: { component: "k11k" },
+    zeroRuntime: true,
+    defaults: { component: "k11k", cacheMaxAgeSeconds: 60 * 60 * 24 * 3 },
     compatibility: { prerender: { chromium: false } }, // disable chromium dependency for prerendering (skips the chromium install in CIs)
   },
   // SCHEMA-ORG
@@ -65,16 +65,23 @@ export default defineNuxtConfig({
     presets: {
       landing: {
         modifiers: {
-          format: "jpg",
+          format: "webp",
           width: 200,
           height: 200,
         },
       },
       avatar: {
         modifiers: {
-          format: "jpg",
+          format: "webp",
           width: 50,
           height: 50,
+        },
+      },
+      ogImageLogo: {
+        modifiers: {
+          format: "png",
+          width: 96,
+          height: 96,
         },
       },
     },

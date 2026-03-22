@@ -103,7 +103,7 @@ useHead({ link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }] })
         </div>
 
         <div class="group shrink-0">
-          <NuxtLink to="/about">
+          <NuxtLink to="/about" title="Learn more about me and KhatastroffiK">
             <Avatar :size="tw`w-[200px]`" preset="landing" />
           </NuxtLink>
         </div>
