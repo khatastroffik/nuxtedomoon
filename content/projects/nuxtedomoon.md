@@ -11,7 +11,7 @@ sitemap:
 
 "Nuxtedo Moon" is an **open-source portfolio template** for publishing a **static web site**.
 
-Occaecat commodo ipsum nulla aute irure Lorem amet commodo culpa ipsum ea incididunt voluptate duis. Esse est non commodo cillum id aliqua fugiat eiusmod duis pariatur commodo. Excepteur cupidatat eu ullamco ea ipsum et commodo ex anim ipsum ad amet. Ea culpa nostrud quis aute consequat et laborum esse velit nisi tempor pariatur labore.
+Occaecat commodo ipsum nulla aute [Here's a beautiful LINK](/) irure Lorem amet commodo culpa ipsum ea incididunt voluptate duis. Esse est non commodo cillum id aliqua fugiat eiusmod duis pariatur commodo. Excepteur cupidatat eu ullamco ea ipsum et commodo ex anim ipsum ad amet. Ea culpa nostrud quis aute consequat et laborum esse velit nisi tempor pariatur labore.
 
 ## heading around...
 

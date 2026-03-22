@@ -11,6 +11,9 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: "page", mode: "out-in" },
   },
+  routeRules: {
+    "/": { appLayout: false }, // Landing Page specific setting !
+  },
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   typescript: { typeCheck: false }, // https://github.com/fi3ework/vite-plugin-checker/issues/557
@@ -49,8 +52,8 @@ export default defineNuxtConfig({
   },
   // OG-IMAGE
   ogImage: {
-    // zeroRuntime: true,
-    defaults: { component: "k11k" },
+    zeroRuntime: true,
+    defaults: { component: "k11k", cacheMaxAgeSeconds: 60 * 60 * 24 * 3 },
     compatibility: { prerender: { chromium: false } }, // disable chromium dependency for prerendering (skips the chromium install in CIs)
   },
   // SCHEMA-ORG
@@ -68,11 +71,25 @@ export default defineNuxtConfig({
   image: {
     format: ["webp"],
     presets: {
+      landing: {
+        modifiers: {
+          format: "webp",
+          width: 200,
+          height: 200,
+        },
+      },
       avatar: {
         modifiers: {
-          format: "jpg",
+          format: "webp",
           width: 50,
           height: 50,
+        },
+      },
+      ogImageLogo: {
+        modifiers: {
+          format: "png",
+          width: 96,
+          height: 96,
         },
       },
     },

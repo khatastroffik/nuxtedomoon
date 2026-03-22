@@ -1,8 +1,12 @@
 {
   "quotes": [
     {
-      "quote": "Drink coffee!\nDostupid thins faster...",
-      "author": "unknown"
+      "quote": "To attain knowledge, add things everyday.\nTo obtain wisdom, remove things everyday.",
+      "author": "Lao Tzu"
+    },
+    {
+      "quote": "Drink coffee!\nDo stupid things faster...",
+      "author": "The Flash"
     },
     {
       "quote": "Glück ist das einzige, das sich verdoppelt, wenn man es teilt.",
@@ -10,14 +14,14 @@
     },
     {
       "quote": "Normal people scare me... but not as much as I scare them.",
-      "author": "unknown"
+      "author": "Quasimodo"
     },
     {
-      "quote": "Si tu donnes un poisson à un homme, il se nourrira une fois. Si tu lui apprends à pêcher, il se nourrira toute sa vie.",
+      "quote": "Si tu donnes un poisson à un homme, il se nourrira une fois.\nSi tu lui apprends à pêcher, il se nourrira toute sa vie.",
       "author": "Ho-Kouan Tseu"
     },
     {
-      "quote": "Ti indicherò un filtro amoroso senza veleni, senza erbe, senza formule magiche: se vuoi essere amato, ama !",
+      "quote": "Ti indicherò un filtro amoroso senza veleni, senza erbe, senza formule magiche:\nse vuoi essere amato, ama !",
       "author": "Lucio Anneo Seneca"
     },
     {
@@ -25,7 +29,7 @@
       "author": "Henry Ford"
     },
     {
-      "quote": "The difficult is what takes a little time; the impossible is what takes a little longer.",
+      "quote": "The difficult is what takes a little time.\nThe impossible is what takes a little longer.",
       "author": "Fridtjof Nansen"
     },
     {
@@ -73,11 +77,11 @@
       "author": "Chinese Proverb"
     },
     {
-      "quote": "The computer can't tell you the emotional story.  It can give you the exact mathematical design, but what's missing is the eyebrows.",
+      "quote": "The computer can't tell you the emotional story.\nIt can give you the exact mathematical design, but what's missing is the eyebrows.",
       "author": "Frank Zappa"
     },
     {
-      "quote": "Where ever you're going, don't walk the first. If you do, people will think you know where you're going.",
+      "quote": "Where ever you're going, don't walk the first.\nIf you do, people will think you know where you're going.",
       "author": "Frank Zappa"
     },
     {
@@ -109,11 +113,11 @@
       "author": "Oleg Vishnepolsky"
     },
     {
-      "quote": "Clients do not come first. Employees come first. If you take care of your employees, they will take care of your clients.",
+      "quote": "Clients do not come first. Employees come first.\nIf you take care of your employees, they will take care of your clients.",
       "author": "Richard Branson"
     },
     {
-      "quote": "A dream writen down with a date becomes a GOAL. A goal broken down into steps becomes a PLAN. A plan backed by ACTION makes your dreams come true.",
+      "quote": "A dream writen down with a date becomes a _GOAL_.\nA goal broken down into steps becomes a _PLAN_.\nA plan backed by _ACTION_ makes your dreams come true.",
       "author": "Greg S. Reid"
     },
     {
@@ -125,7 +129,7 @@
       "author": "T.B. Lehon"
     },
     {
-      "quote": "Good, cheap, fast ... pick two. If it's fast and cheap it won't be good. If it's cheap and good it won't be fast. If it’s fast and good it wont be cheap.",
+      "quote": "Good, cheap, fast ... pick two.\nIf it's fast and cheap it won't be good.\nIf it's cheap and good it won't be fast.\nIf it's fast and good it wont be cheap.",
       "author": "Jim Jarmusch"
     },
     {
@@ -133,7 +137,7 @@
       "author": "Henry Ford"
     },
     {
-      "quote": "The real job of a leader is not about being in charge. It's about taking care of those in your charge.",
+      "quote": "The real job of a leader is not about being in charge.\nIt's about taking care of those in your charge.",
       "author": "Simon Sinek"
     },
     {
@@ -145,20 +149,20 @@
       "author": "George Santayana"
     },
     {
-      "quote": "Anleitung für einen guten Start in den Tag: 1. Mach Dir einen grünen Smoothie. 2. Ignoriere jede Kritik dazu: 'Mimimi, da ist ja Alkohol drin, mimimi das ist ja ein Mojito, mimimi...",
+      "quote": "Anleitung für einen guten Start in den Tag:\n1. Mach Dir einen grünen Smoothie.\n2. Ignoriere jede Kritik dazu:\n&nbsp;&nbsp;&nbsp;&#x00AB;Mimimi, da ist ja Alkohol drin, mimimi das ist ja ein Mojito, mimimi...&#x00BB;&nbsp;",
+      "author": "Der frühe Vogel / The Early Bird"
+    },
+    {
+      "quote": "If you say 'fuck off' backwards, it still says 'fuck off'...\nbut in an Irish accent.",
       "author": "unknown"
     },
     {
-      "quote": "If you say 'fuck off' backwards, it still says 'fuck off'... but in an Irish accent.",
-      "author": "unknown"
-    },
-    {
-      "quote": "My grandfather once told me that there were two kinds of people; those who do the work and those who take the credit. He told me to try to be in the first group; there was much less competition.",
+      "quote": "My grandfather once told me that there were two kinds of people:\n&rarr;&nbsp;those who do the work and those who take the credit.\nHe told me to try to be in the first group:\n&rarr;&nbsp;there was much less competition.",
       "author": "Indira Gandhi"
     },
     {
       "quote": "Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth.",
-      "author": "(misattributed to) Marcus Aurelius"
+      "author": "Marcus Aurelius (misattributed)"
     }
   ]
 }

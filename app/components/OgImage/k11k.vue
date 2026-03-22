@@ -40,7 +40,11 @@ const siteLogo = computed(() => {
           <span style="transform: rotate(180deg);" class="-mr-2">K</span>
           <span>hatastroffiK</span>
         </div>
-        <img v-if="siteLogo" :src="siteLogo" class="h-24 w-24">
+        <NuxtImg
+          v-if="siteLogo"
+          :src="siteLogo"
+          preset="ogImageLogo"
+          class="h-24 w-24" />
       </div>
     </div>
   </div>

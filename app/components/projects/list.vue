@@ -10,7 +10,7 @@ projects.value?.sort((a, b) => (new Date(b.sitemap.lastmod).getTime()) - new Dat
   <div class="flex flex-wrap justify-between gap-5">
     <div v-for="project in projects" :key="project.id" class="not-prose image-full card max-w-96 shrink border-primary shadow-sm card-border hover:border-accent">
       <figure>
-        <NuxtImg src="/project.jpg" />
+        <NuxtImg src="/project.jpg" alt="project card picture" format="webp" />
       </figure>
       <div class="card-body">
         <h2 class="card-title items-start text-3xl font-bold">{{ project.title }} <div class="badge badge-sm badge-warning">NEW</div></h2>
