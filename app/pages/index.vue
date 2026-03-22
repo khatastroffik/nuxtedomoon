@@ -48,12 +48,22 @@ useHead({ link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }] })
 <template>
   <div class="h-full w-full bg-black sm:h-screen" data-theme="dark">
     <div class="flex h-fit w-full flex-col items-center justify-center bg-[url(/cover.jpg)] bg-cover bg-fixed bg-center bg-no-repeat">
-      <header ref="HEADER" class="sticky top-0 z-100 mx-auto mt-4 flex h-18 max-h-18 w-full max-w-7xl self-stretch rounded-lg border border-base-300 bg-base-200/60 p-4 shadow-lg">
+      <header
+        ref="HEADER"
+        class="sticky top-0 z-100 mx-auto mt-4 flex h-18 max-h-18 w-full max-w-7xl self-stretch rounded-lg border border-base-300 bg-base-200/60 p-4 shadow-lg"
+        role="banner"
+        aria-label="Menu bar with logo and links to internal pages">
         <div class="flex flex-1 items-center justify-between">
           <brand />
         </div>
         <div class="dropdown dropdown-end dropdown-bottom lg:hidden">
-          <div tabindex="0" role="button" class="btn btn-ghost btn-sm"><Icon name="tabler:menu-2" title="Menu" class="h-6 w-6 stroke-3!" /></div>
+          <div
+            tabindex="0"
+            role="button"
+            class="btn btn-ghost btn-sm"
+            aria-label="open or close the main menu dropdown list">
+            <Icon name="tabler:menu-2" title="Menu" class="h-6 w-6 stroke-3!" />
+          </div>
           <PagesMenu tabindex="-1" class="dropdown-content menu absolute z-1 w-36 flex-col rounded-box bg-base-100 p-0 shadow-sm" />
         </div>
         <div id="menu" class="hidden w-full lg:flex lg:w-auto lg:items-center">

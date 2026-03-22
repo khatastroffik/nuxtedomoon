@@ -22,7 +22,7 @@ watchDebounced(
 </script>
 
 <template>
-  <div class="relative flex w-full max-w-7xl flex-row">
+  <div class="relative flex w-full max-w-7xl flex-row" role="navigation" aria-label="navigation using breadcrumbs and links to the previous or next page on the same level">
     <div class="breadcrumbs inline-flex w-3/4 items-center justify-start px-2 text-sm leading-none">
       <ul>
         <li v-for="(item, index) in breadcrumbs" :key="index">
