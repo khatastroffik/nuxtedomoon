@@ -1,6 +1,7 @@
 ---
 title: KhatastroffiK Projects
 description: Open Source projects, (web) applications and Proof-of-Concept ...
+category: Projects
 menuLabel: Projects
 menuPosition: 20
 sitemap:

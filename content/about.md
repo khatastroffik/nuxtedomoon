@@ -1,6 +1,7 @@
 ---
 title: About me & KhatastroffiK
 description: Some more details about me and K11K ...
+category: About
 menuLabel: About
 menuPosition: 100
 sitemap:

@@ -5,10 +5,16 @@ import { defineNuxtConfig } from "nuxt/config";
 const NUXT_APP_BASE_URL = process.env.NUXT_APP_BASE_URL ?? "";
 
 const _url = "https://khatastroffik.github.io";
-const _logo = `/apple-icon-144x144.png`;
+const _logo = "/apple-icon-144x144.png";
 
 export default defineNuxtConfig({
   app: {
+    baseURL: NUXT_APP_BASE_URL,
+    head: {
+      link: [
+        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      ],
+    },
     pageTransition: { name: "page", mode: "out-in" },
   },
   routeRules: {
@@ -17,7 +23,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   typescript: { typeCheck: false }, // https://github.com/fi3ework/vite-plugin-checker/issues/557
-  modules: ["@nuxtjs/seo", "@nuxt/content", "@nuxt/icon", "@nuxt/image", "@nuxtjs/color-mode"],
+  modules: ["@nuxtjs/seo", "@nuxt/content", "@nuxt/icon", "@nuxt/image", "@nuxtjs/color-mode", "@nuxt/fonts"],
   css: ["~/assets/style/main.css"],
   content: {
     watch: { enabled: true },
@@ -53,8 +59,10 @@ export default defineNuxtConfig({
   // OG-IMAGE
   ogImage: {
     zeroRuntime: true,
-    defaults: { component: "k11k", cacheMaxAgeSeconds: 60 * 60 * 24 * 3 },
-    compatibility: { prerender: { chromium: false } }, // disable chromium dependency for prerendering (skips the chromium install in CIs)
+    buildCache: false,
+    defaults: { cacheMaxAgeSeconds: 60 },
+    // defaults: { cacheMaxAgeSeconds: 60 * 60 * 24 * 3 },
+    compatibility: { prerender: { browser: false } }, // disable chromium dependency for prerendering (skips the chromium install in CIs)
   },
   // SCHEMA-ORG
   schemaOrg: {

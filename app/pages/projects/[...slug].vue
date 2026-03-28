@@ -1,41 +1,39 @@
 <script lang="ts" setup>
-const { staticPagePath, ogImagePath } = useStaticPageRoutes();
-const spp = toValue(staticPagePath);
-
+const { staticPagePath } = useStaticPageRoutes();
 const { collectionQuery, surroundingsQuery } = computed(() =>
-  spp === "/projects"
+  staticPagePath.value === "/projects"
     ? {
-        collectionQuery: queryCollection("pages").path(spp).first(),
-        surroundingsQuery: queryCollectionItemSurroundings("pages", spp, { fields: ["menuPosition", "menuLabel"] }).order("menuPosition", "ASC"),
+        collectionQuery: queryCollection("pages").path(staticPagePath.value).first(),
+        surroundingsQuery: queryCollectionItemSurroundings("pages", staticPagePath.value, { fields: ["menuPosition", "menuLabel"] }).order("menuPosition", "ASC"),
       }
     : {
-        collectionQuery: queryCollection("projects").path(spp).first(),
-        surroundingsQuery: queryCollectionItemSurroundings("projects", spp),
+        collectionQuery: queryCollection("projects").path(staticPagePath.value).first(),
+        surroundingsQuery: queryCollectionItemSurroundings("projects", staticPagePath.value),
       },
 ).value;
-
-const { data: page } = await useAsyncData(`projects-${spp}`, () => {
+const { data: page } = await useAsyncData(`projects-${staticPagePath.value}`, () => {
   return collectionQuery;
 });
 
 if (!page.value) {
+  console.error(`Page not found\n[PATH] ${staticPagePath.value}`);
   throw createError({ statusCode: 404, statusText: "Page not found", fatal: true });
 }
 
 useSurroundings(surroundingsQuery);
 
-defineOgImage();
+const [ogImagePath] = defineOgImage("K11k", { title: page.value.title, description: page.value.description, category: page.value.category });
 
 useSeoMeta({
   title: page.value.title,
   description: page.value.description,
   ogImage: ogImagePath,
+  ogImageAlt: `Social Media card representation of the page: ${page.value.title}`,
   twitterTitle: page.value.title,
   twitterDescription: page.value.description,
   twitterImage: ogImagePath,
+  articleAuthor: ["K11K"], // [runtimeConfig["nuxt-schema-org"].identity.name],
 });
-
-useHead({ link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }] });
 </script>
 
 <template>

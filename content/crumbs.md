@@ -1,6 +1,7 @@
 ---
 title: KhatastroffiK Crumbs
 description: Code snippets, Best Practices, Tips & Tricks, Helpers and other small contributions
+category: Crumbs
 menuLabel: Crumbs
 menuPosition: 30
 sitemap:

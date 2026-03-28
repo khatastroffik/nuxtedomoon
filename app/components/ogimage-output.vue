@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-const route = useRoute();
-const url = `/__og-image__/static${route.path === "/" ? "" : removeTrailingSlash(route.path)}/og.png`;
+defineProps<{ url?: string }>();
 </script>
 
 <template>

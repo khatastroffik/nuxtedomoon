@@ -1,7 +1,7 @@
 ---
 title: "Article #1"
 description: The first article...
-ogImage: true
+category: Article
 sitemap:
   lastmod: 2026-02-19
   changefreq: monthly

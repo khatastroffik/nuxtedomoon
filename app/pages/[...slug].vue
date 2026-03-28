@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { staticPagePath, ogImagePath, originalRoute: route } = useStaticPageRoutes();
+const { staticPagePath } = useStaticPageRoutes();
 const spp = toValue(staticPagePath);
 
 const { data: page } = await useAsyncData(`page-${spp}`, () => {
@@ -7,26 +7,29 @@ const { data: page } = await useAsyncData(`page-${spp}`, () => {
 });
 
 if (!page.value) {
-  console.error(`Page not found\nPATH=${route.path}\nFULLPATH=${route.fullPath}`);
+  console.error(`Page not found\n[PATH] ${spp}`);
   throw createError({ statusCode: 404, statusText: "Page not found", fatal: true });
 }
 
-useSurroundings(queryCollectionItemSurroundings("pages", route.path, { fields: ["menuPosition", "menuLabel"] }).order("menuPosition", "ASC"));
+useSurroundings(queryCollectionItemSurroundings("pages", spp, { fields: ["menuPosition", "menuLabel"] }).order("menuPosition", "ASC"));
 
-defineOgImage();
+const [ogImagePath] = defineOgImage("K11k", { title: page.value.title, description: page.value.description, category: page.value.category });
 
 useSeoMeta({
   title: page.value.title,
   description: page.value.description,
   ogImage: ogImagePath,
+  ogImageAlt: `Social Media card representation of the page: ${page.value.title}`,
   twitterTitle: page.value.title,
   twitterDescription: page.value.description,
   twitterImage: ogImagePath,
 });
-
-useHead({ link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }] });
 </script>
 
 <template>
-  <ContentRenderer v-if="page" :value="page" tag="main">no no no</ContentRenderer>
+  <div>
+    <p>{{ ogImagePath }}</p>
+    <img :src="ogImagePath" width="600" alt="open grapth social media image preview">
+    <ContentRenderer v-if="page" :value="page" tag="main">no no no</ContentRenderer>
+  </div>
 </template>

@@ -30,19 +30,17 @@ if (!page.value) {
   throw createError({ statusCode: 404, statusText: "Page not found", fatal: true });
 }
 
-const ogImagePath = "/__og-image__/static/og.png";
-defineOgImage();
+const [ogImagePath] = defineOgImage("K11k", { title: page.value.title, description: page.value.description, category: page.value.category });
 
 useSeoMeta({
   title: page.value.title,
   description: page.value.description,
   ogImage: ogImagePath,
+  ogImageAlt: `Social Media Card representation of the home page: ${page.value.title}`,
   twitterTitle: page.value.title,
   twitterDescription: page.value.description,
   twitterImage: ogImagePath,
 });
-
-useHead({ link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }] });
 </script>
 
 <template>
@@ -178,9 +176,17 @@ useHead({ link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }] })
         <DailyQuote />
       </div>
 
+      <!-- DIVIDER - OG-IMAGE -->
+      <Divider class="mb-0">OG-Image</Divider>
+      <div class="mt-8">
+        <OgimageOutput :url="ogImagePath" />
+      </div>
+      <DevOnly />
+
       <!-- DIVIDER - FOOTER -->
       <Divider class="mb-0">Footer</Divider>
       <PagesFooter />
+      <NuxtTime :datetime="new Date()" />
     </div>
   </div>
 </template>

@@ -1,6 +1,7 @@
 ---
-title: "Project #2"
+title: "Project 2"
 description: The second project...
+category: Project
 ogImage: true
 sitemap:
   lastmod: 2026-02-19

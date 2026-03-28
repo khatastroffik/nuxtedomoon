@@ -1,6 +1,7 @@
 ---
-title: "Nuxtedo Moon"
-description: "'Nuxtedo Moon' is an open-source static 'Portfolio' site template implemented using Nuxt v4, Nuxt-Content v3, Nuxt-Seo, Tailwindcss v4 and DaisyUI..."
+title: "A Beautiful Nuxtedo Moon"
+description: Nuxtedo Moon is an open-source 'Portfolio/Blog' template for publishing a responsive and static web site. It's implemented using Nuxt v4, Nuxt-Content, Nuxt-SEO, Tailwindcss and DaisyUI.
+category: Project
 sitemap:
   lastmod: 2026-02-19
   changefreq: monthly
@@ -9,7 +10,7 @@ sitemap:
 
 # Nuxtedo Moon
 
-"Nuxtedo Moon" is an **open-source portfolio template** for publishing a **static web site**.
+"Nuxtedo Moon" is an **open-source Portfolio/Blog template** for publishing a **responsive** and **static** web site.
 
 Occaecat commodo ipsum nulla aute [Here's a beautiful LINK](/) irure Lorem amet commodo culpa ipsum ea incididunt voluptate duis. Esse est non commodo cillum id aliqua fugiat eiusmod duis pariatur commodo. Excepteur cupidatat eu ullamco ea ipsum et commodo ex anim ipsum ad amet. Ea culpa nostrud quis aute consequat et laborum esse velit nisi tempor pariatur labore.
 

@@ -1,15 +1,16 @@
 import { defineCollection, defineContentConfig, z } from "@nuxt/content";
-import { asSeoCollection } from "@nuxtjs/seo/content";
+import { defineOgImageSchema } from "nuxt-og-image/content";
 
 export default defineContentConfig({
   collections: {
     pages: defineCollection(
-      asSeoCollection({
+      {
         type: "page",
         source: "*.md",
         schema: z.object({
           title: z.string(),
           description: z.string(),
+          category: z.string(),
           menuLabel: z.string(),
           menuPosition: z.number(),
           sitemap: z.object({
@@ -17,42 +18,45 @@ export default defineContentConfig({
             changefreq: z.string(),
             priority: z.number(),
           }),
+          ogImage: defineOgImageSchema(),
         }),
-      }),
+      },
     ),
 
     articles: defineCollection(
-      asSeoCollection({
+      {
         type: "page",
         source: "articles/*.md",
         schema: z.object({
           title: z.string(),
           description: z.string(),
+          category: z.string(),
           sitemap: z.object({
             lastmod: z.date(),
             changefreq: z.string(),
             priority: z.number(),
           }),
-
+          ogImage: defineOgImageSchema(),
         }),
-      }),
+      },
     ),
 
     projects: defineCollection(
-      asSeoCollection({
+      {
         type: "page",
         source: "projects/*.md",
         schema: z.object({
           title: z.string(),
           description: z.string(),
+          category: z.string(),
           sitemap: z.object({
             lastmod: z.date(),
             changefreq: z.string(),
             priority: z.number(),
           }),
-
+          ogImage: defineOgImageSchema(),
         }),
-      }),
+      },
     ),
 
     quotes: defineCollection({

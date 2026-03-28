@@ -99,3 +99,13 @@
     @apply opacity-50;
   }
 }
+/* UI DEBUGING CLASS AND UTILITY - ADD A (COLORED) BORDER TO TARGETED ELEMENTS */
+.debug {
+  @apply border-2 border-accent/100 border-solid;
+}
+@utility debug-* {
+  border-style: solid;
+  border-width: 1px;
+  border-color: --value(--color-*);
+  border-color: --value([color]);
+}
