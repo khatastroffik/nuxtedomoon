@@ -1,5 +1,8 @@
 import { defineCollection, defineContentConfig, z } from "@nuxt/content";
+import { defineRobotsSchema } from "@nuxtjs/robots/content";
+import { defineSitemapSchema } from "@nuxtjs/sitemap/content";
 import { defineOgImageSchema } from "nuxt-og-image/content";
+import { defineSchemaOrgSchema } from "nuxt-schema-org/content";
 
 export default defineContentConfig({
   collections: {
@@ -8,17 +11,13 @@ export default defineContentConfig({
         type: "page",
         source: "*.md",
         schema: z.object({
-          title: z.string(),
-          description: z.string(),
           category: z.string(),
           menuLabel: z.string(),
           menuPosition: z.number(),
-          sitemap: z.object({
-            lastmod: z.date(),
-            changefreq: z.string(),
-            priority: z.number(),
-          }),
           ogImage: defineOgImageSchema(),
+          sitemap: defineSitemapSchema (),
+          robots: defineRobotsSchema(),
+          schemaOrg: defineSchemaOrgSchema(),
         }),
       },
     ),
@@ -28,15 +27,11 @@ export default defineContentConfig({
         type: "page",
         source: "articles/*.md",
         schema: z.object({
-          title: z.string(),
-          description: z.string(),
           category: z.string(),
-          sitemap: z.object({
-            lastmod: z.date(),
-            changefreq: z.string(),
-            priority: z.number(),
-          }),
+          robots: defineRobotsSchema(),
+          sitemap: defineSitemapSchema (),
           ogImage: defineOgImageSchema(),
+          schemaOrg: defineSchemaOrgSchema(),
         }),
       },
     ),
@@ -46,15 +41,11 @@ export default defineContentConfig({
         type: "page",
         source: "projects/*.md",
         schema: z.object({
-          title: z.string(),
-          description: z.string(),
           category: z.string(),
-          sitemap: z.object({
-            lastmod: z.date(),
-            changefreq: z.string(),
-            priority: z.number(),
-          }),
+          robots: defineRobotsSchema(),
+          sitemap: defineSitemapSchema (),
           ogImage: defineOgImageSchema(),
+          schemaOrg: defineSchemaOrgSchema(),
         }),
       },
     ),

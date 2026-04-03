@@ -4,10 +4,10 @@ trustPolicy: no-downgrade
 
 trustPolicyExclude:
   - koa@2.16.3
-
 onlyBuiltDependencies:
-  - better-sqlite3
   - "@parcel/watcher"
+  - better-sqlite3
   - esbuild
-  - sharp
   - semver
+  - sharp
+  - vue-demi

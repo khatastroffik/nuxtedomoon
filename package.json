@@ -38,8 +38,12 @@
     "lintix": "eslint . --fix",
     "dry-commit": "git hook run pre-commit",
     "cleanup": "nuxt cleanup",
-    "reset": "nuxt cleanup && pnpx rimraf .nuxt .output .data dist node_modules",
-    "ninfo": "nuxt info"
+    "reset": "rimraf node_modules pnpm-lock.yaml dist .cache .output .nuxt .data",
+    "ninfo": "nuxt info",
+    "serve": "pnpx serve .output/public",
+    "node": "node .output/server/index.mjs",
+    "http": "pnpx http-server .output/public",
+    "http:base": "pnpx https://github.com/http-party/http-server.git#5ec4848383dc10391a8a63ffa52d3b01d111e292 .output/public -c-1 --base-dir nuxtedomoon"
   },
   "dependencies": {
     "@iconify-json/tabler": "^1.2.28",
@@ -48,7 +52,7 @@
     "@nuxt/icon": "2.2.1",
     "@nuxt/image": "2.0.0",
     "@nuxtjs/color-mode": "4.0.0",
-    "@nuxtjs/seo": "4.0.2",
+    "@nuxtjs/seo": "5.0.2",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.2.2",
     "@takumi-rs/core": "1.0.0-beta.20",
