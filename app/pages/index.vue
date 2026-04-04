@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 const headerRef = useTemplateRef("HEADER");
+const layoutRef = useTemplateRef("LAYOUT");
 const spp = "/";
 
 onBeforeMount(() => {
@@ -9,10 +10,16 @@ onBeforeMount(() => {
 });
 
 onMounted(() => {
+  setTimeout(() => {
+    layoutRef.value?.classList.remove("layout-enter-from");
+  }, 0);
+
   doScroll(undefined);
 });
 
 onBeforeUnmount(() => {
+  layoutRef.value?.classList.add("layout-leave-active");
+  layoutRef.value?.classList.add("layout-leave-to");
   if (import.meta.client) {
     window.removeEventListener("scroll", doScroll);
   }
@@ -53,7 +60,7 @@ useSeoMeta({
 
 <template>
   <div class="h-full w-full bg-black sm:h-screen" data-theme="dark">
-    <div class="flex h-fit w-full flex-col items-center justify-center bg-[url(/cover.jpg)] bg-cover bg-fixed bg-center bg-no-repeat">
+    <div ref="LAYOUT" class="layout-enter-active layout-enter-from flex h-fit w-full flex-col items-center justify-center bg-[url(/cover.jpg)] bg-cover bg-fixed bg-center bg-no-repeat">
       <header
         ref="HEADER"
         class="sticky top-0 z-100 mx-auto mt-4 flex h-18 max-h-18 w-full max-w-7xl self-stretch rounded-lg border border-base-300 bg-base-200/60 p-4 shadow-lg"

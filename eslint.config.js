@@ -50,7 +50,7 @@ export default antfu(
     settings: {
       tailwindcss: {
         config: `${dirname(fileURLToPath(import.meta.url))}/app/assets/style/main.css`,
-        whitelist: ["tab-active", "swap-off", "swap-on", "tooltip-content", "footer-center", "dropdown-content", "dropdown-hover"],
+        whitelist: ["tab-active", "swap-off", "swap-on", "tooltip-content", "footer-center", "dropdown-content", "dropdown-hover", "layout-enter-active", "layout-enter-from"],
         tags: ["tw"],
       },
     },
