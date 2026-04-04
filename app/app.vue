@@ -25,4 +25,10 @@ useBreadcrumbItems({ overrides: [{ label: "Home", ariaLabel: "Home" }] });
   opacity: 0;
   filter: blur(0.6rem);
 }
+
+.layout-enter-from,
+.layout-leave-to {
+  opacity: 60;
+  filter: blur(0.6rem);
+}
 </style>

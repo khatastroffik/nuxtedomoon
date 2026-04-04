@@ -26,7 +26,7 @@ watchDebounced(
     <div class="breadcrumbs inline-flex w-3/4 items-center justify-start px-2 text-sm leading-none">
       <ul>
         <li v-for="(item, index) in breadcrumbs" :key="index">
-          <NuxtLink :to="item.to" class="opacity-80 hover:opacity-100" :aria-label="item.ariaLabel">
+          <NuxtLink :to="item.to" class="no-underline opacity-80 hover:text-accent hover:opacity-100" :aria-label="item.ariaLabel">
             <template v-if="item.to === '/'"><Icon name="tabler:home" class="h-4 w-4" /></template>
             {{ item.label }}
           </NuxtLink>
@@ -43,7 +43,7 @@ watchDebounced(
             <div class="text-sm font-light text-white/70 italic">navigate to</div>
             <p class="mb-2 px-1">&ldquo;&#x202F;{{ prevLinkTo?.title }}&#x202F;&rdquo;</p>
           </div>
-          <NuxtLink :to="prevLinkTo?.path" class="btn btn-circle btn-soft btn-xs" :class="{ 'btn-disabled': !prevLinkTo }">
+          <NuxtLink :to="prevLinkTo?.path" class="btn btn-circle btn-soft btn-xs hover:text-accent" :class="{ 'btn-disabled': !prevLinkTo }">
             <Icon name="tabler:arrow-left" class="h-3 w-3" />
           </NuxtLink>
         </div>
@@ -52,7 +52,7 @@ watchDebounced(
             <div class="text-sm font-light text-white/70 italic">navigate to</div>
             <p class="mb-2 px-1">&laquo;&#x202F;{{ nextLinkTo?.title }}&#x202F;&raquo;</p>
           </div>
-          <NuxtLink :to="nextLinkTo?.path" class="btn btn-circle btn-soft btn-xs" :class="{ 'btn-disabled': !nextLinkTo }">
+          <NuxtLink :to="nextLinkTo?.path" class="btn btn-circle btn-soft btn-xs hover:text-accent" :class="{ 'btn-disabled': !nextLinkTo }">
             <Icon name="tabler:arrow-right" class="h-3 w-3" />
           </NuxtLink>
         </div>

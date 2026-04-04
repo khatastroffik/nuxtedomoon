@@ -202,7 +202,6 @@ useSeoMeta({
       <!-- DIVIDER - FOOTER -->
       <Divider class="mb-0">Footer</Divider>
       <PagesFooter />
-      <NuxtTime :datetime="new Date()" />
     </div>
   </div>
 </template>

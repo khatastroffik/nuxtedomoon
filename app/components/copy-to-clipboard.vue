@@ -19,7 +19,7 @@ async function onCopy() {
             </div>
           </div>
           <Icon
-            class="ml-2 h-2.5 w-2.5 opacity-55"
+            class="ml-3 h-2.5 w-2.5 opacity-55 hover:text-accent"
             :name="copied ? 'tabler:check' : 'tabler:copy'"
             :disabled="copied"
             @click.prevent="onCopy" />
