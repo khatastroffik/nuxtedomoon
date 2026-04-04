@@ -7,29 +7,34 @@ const { data: page } = await useAsyncData(`page-${spp}`, () => {
 });
 
 if (!page.value) {
-  console.error(`Page not found\n[PATH] ${spp}`);
   throw createError({ statusCode: 404, statusText: "Page not found", fatal: true });
 }
 
 useSurroundings(queryCollectionItemSurroundings("pages", spp, { fields: ["menuPosition", "menuLabel"] }).order("menuPosition", "ASC"));
 
-const [ogImagePath] = defineOgImage("K11k", { title: page.value.title, description: page.value.description, category: page.value.category });
+const ogImageComponentProps = { title: page.value.title, description: page.value.description, category: page.value.category };
+const { data: ogImagePath } = await useAsyncData(`ogimage-${spp}`, async () => {
+  return Promise.resolve(defineOgImage("K11k.takumi", ogImageComponentProps)[0]);
+});
+
+const ogImageAlt = `Social Media Card of the page: ${page.value.title}`;
 
 useSeoMeta({
   title: page.value.title,
   description: page.value.description,
-  ogImage: ogImagePath,
-  ogImageAlt: `Social Media card representation of the page: ${page.value.title}`,
+  ogImage: ogImagePath.value,
+  ogImageAlt,
   twitterTitle: page.value.title,
   twitterDescription: page.value.description,
-  twitterImage: ogImagePath,
+  twitterCreator: "K11K",
+  twitterImage: ogImagePath.value,
+  twitterImageAlt: ogImageAlt,
 });
 </script>
 
 <template>
   <div>
-    <p>{{ ogImagePath }}</p>
-    <img :src="ogImagePath" width="600" alt="open grapth social media image preview">
+    <OgimageOutput :src="ogImagePath" />
     <ContentRenderer v-if="page" :value="page" tag="main">no no no</ContentRenderer>
   </div>
 </template>

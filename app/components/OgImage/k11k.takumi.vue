@@ -35,17 +35,17 @@ const siteLogo = computed(() => {
 <template>
   <div class="flex h-full w-full justify-between rounded-4xl border-2 border-solid border-[#00e400] bg-black p-15 text-white">
     <div class="absolute inset-0 rounded-4xl bg-[radial-gradient(circle_at_bottom_right,rgba(0,228,0,0.5)_0%,rgba(0,47,50,0.6)_35%,rgba(0,47,50,0.1)_90%,rgba(0,47,50,0.2)_100%)]" />
-    <div class="w-full flex-col items-start justify-between">
-      <div class="flex w-full flex-col">
+    <div class="flex h-full w-full flex-col justify-start">
+      <div class="flex w-full flex-1 flex-col justify-start">
         <div class="inline-flex place-content-center justify-start">
-          <span class="rounded-xl bg-accent px-6 py-1 text-2xl font-semibold text-accent-content">
+          <span class="rounded-xl bg-error px-6 py-1 text-2xl font-semibold text-accent-content">
             {{ category }}
           </span>
         </div>
-        <h1 class="my-8 block text-6xl font-bold text-ellipsis" :style="{ lineClamp: description ? 2 : 3 }">
+        <h1 class="my-8 line-clamp-2 block max-h-40 overflow-clip text-6xl font-bold text-ellipsis">
           {{ title }}
         </h1>
-        <p v-if="description" class="line-clamp-3 block max-h-40 overflow-clip text-[35px] leading-12 text-ellipsis text-gray-300">
+        <p v-if="description" class="line-clamp-2 block max-h-28 overflow-clip text-[35px] leading-12 text-ellipsis text-gray-300">
           {{ description }}
         </p>
       </div>

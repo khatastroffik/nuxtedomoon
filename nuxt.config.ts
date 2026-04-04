@@ -1,13 +1,13 @@
 import tailwindcss from "@tailwindcss/vite";
 import { defineNuxtConfig } from "nuxt/config";
 
-const _logo = "/logo.png";
-
 const SITE_URL: string = import.meta.env.NUXT_PUBLIC_SITE_URL || "http://localhost:3000";
 const BASE_URL: string = import.meta.env.NUXT_APP_BASE_URL || "";
+const LOGO_URL = "/logo.png";
+
+const cleanBaseUrl = BASE_URL.endsWith("/") ? BASE_URL.slice(0, -1) : BASE_URL;
 
 function urlFromPath(path: string) {
-  const cleanBaseUrl = BASE_URL.endsWith("/") ? BASE_URL.slice(0, -1) : BASE_URL;
   return new URL(cleanBaseUrl + path, SITE_URL).href;
 }
 
@@ -15,8 +15,8 @@ export default defineNuxtConfig({
   app: {
     baseURL: BASE_URL,
     head: { link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      { rel: "preload", as: "image", type: "image/jpg", href: "/cover.jpg", fetchpriority: "high" },
+      { rel: "icon", type: "image/x-icon", href: `${cleanBaseUrl}/favicon.ico` },
+      { rel: "preload", as: "image", type: "image/jpg", href: `${cleanBaseUrl}/cover.jpg`, fetchpriority: "high" },
     ] },
     pageTransition: { name: "page", mode: "out-in" },
   },
@@ -79,8 +79,9 @@ export default defineNuxtConfig({
   site: {
     url: SITE_URL,
     name: "K11K",
+    description: "Nuxtedo-Moon is a responsive portfolio/blog static web page template designed using Nuxt, Nuxt-Content, Nuxt-SEO, Tailwind CSS and daisyUI.",
     defaultLocale: "en",
-    logo: _logo,
+    logo: LOGO_URL,
   },
   // NUXT-SEO :: SITEMAP
   sitemap: {

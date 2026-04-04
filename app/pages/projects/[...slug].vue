@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 const { staticPagePath } = useStaticPageRoutes();
+
 const { collectionQuery, surroundingsQuery } = computed(() =>
   staticPagePath.value === "/projects"
     ? {
@@ -16,22 +17,28 @@ const { data: page } = await useAsyncData(`projects-${staticPagePath.value}`, ()
 });
 
 if (!page.value) {
-  console.error(`Page not found\n[PATH] ${staticPagePath.value}`);
   throw createError({ statusCode: 404, statusText: "Page not found", fatal: true });
 }
 
 useSurroundings(surroundingsQuery);
 
-const [ogImagePath] = defineOgImage("K11k", { title: page.value.title, description: page.value.description, category: page.value.category });
+const ogImageComponentProps = { title: page.value.title, description: page.value.description, category: page.value.category };
+const { data: ogImagePath } = await useAsyncData(`ogimage-${staticPagePath.value}`, async () => {
+  return Promise.resolve(defineOgImage("K11k.takumi", ogImageComponentProps)[0]);
+});
+
+const ogImageAlt = `Social Media Card of the page: ${page.value.title}`;
 
 useSeoMeta({
   title: page.value.title,
   description: page.value.description,
-  ogImage: ogImagePath,
-  ogImageAlt: `Social Media card representation of the page: ${page.value.title}`,
+  ogImage: ogImagePath.value,
+  ogImageAlt,
   twitterTitle: page.value.title,
   twitterDescription: page.value.description,
-  twitterImage: ogImagePath,
+  twitterCreator: "K11K",
+  twitterImage: ogImagePath.value,
+  twitterImageAlt: ogImageAlt,
   articleAuthor: ["K11K"], // [runtimeConfig["nuxt-schema-org"].identity.name],
 });
 </script>

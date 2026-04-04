@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 const headerRef = useTemplateRef("HEADER");
+const spp = "/";
 
 onBeforeMount(() => {
   if (import.meta.client) {
@@ -23,23 +24,30 @@ function doScroll(_e?: Event) {
 };
 
 const { data: page } = await useAsyncData("landing", () => {
-  return queryCollection("pages").path("/").first();
+  return queryCollection("pages").path(spp).first();
 });
 
 if (!page.value) {
   throw createError({ statusCode: 404, statusText: "Page not found", fatal: true });
 }
 
-const [ogImagePath] = defineOgImage("K11k", { title: page.value.title, description: page.value.description, category: page.value.category });
+const ogImageComponentProps = { title: page.value.title, description: page.value.description, category: page.value.category };
+const { data: ogImagePath } = await useAsyncData(`ogimage-${spp}`, async () => {
+  return Promise.resolve(defineOgImage("K11k.takumi", ogImageComponentProps)[0]);
+});
+
+const ogImageAlt = `Social Media Card of the page: ${page.value.title}`;
 
 useSeoMeta({
   title: page.value.title,
   description: page.value.description,
-  ogImage: ogImagePath,
-  ogImageAlt: `Social Media Card representation of the home page: ${page.value.title}`,
+  ogImage: ogImagePath.value,
+  ogImageAlt,
   twitterTitle: page.value.title,
   twitterDescription: page.value.description,
-  twitterImage: ogImagePath,
+  twitterCreator: "K11K",
+  twitterImage: ogImagePath.value,
+  twitterImageAlt: ogImageAlt,
 });
 </script>
 
@@ -52,7 +60,7 @@ useSeoMeta({
         role="banner"
         aria-label="Menu bar with logo and links to internal pages">
         <div class="flex flex-1 items-center justify-between">
-          <brand />
+          <Brand />
         </div>
         <div class="dropdown dropdown-end dropdown-bottom lg:hidden">
           <div
@@ -179,9 +187,8 @@ useSeoMeta({
       <!-- DIVIDER - OG-IMAGE -->
       <Divider class="mb-0">OG-Image</Divider>
       <div class="mt-8">
-        <OgimageOutput :url="ogImagePath" />
+        <OgimageOutput :src="ogImagePath" />
       </div>
-      <DevOnly />
 
       <!-- DIVIDER - FOOTER -->
       <Divider class="mb-0">Footer</Divider>

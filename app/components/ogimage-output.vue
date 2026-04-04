@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-defineProps<{ url?: string }>();
+defineProps<{ src?: string }>();
 </script>
 
 <template>
-  <img :src="url" width="600" alt="open grapth social media image preview">
+  <img :src="src" width="600" alt="open grapth social media image preview">
 </template>
