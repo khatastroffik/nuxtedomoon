@@ -19,6 +19,7 @@ export default defineNuxtConfig({
       { rel: "preload", as: "image", type: "image/jpg", href: `${cleanBaseUrl}/cover.jpg`, fetchpriority: "high" },
     ] },
     pageTransition: { name: "page", mode: "out-in" },
+    layoutTransition: { name: "layout", mode: "out-in" },
   },
   nitro: {
     prerender: { crawlLinks: true, routes: ["/"] },
