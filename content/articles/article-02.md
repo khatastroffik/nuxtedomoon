@@ -1,7 +1,7 @@
 ---
 title: "Article #2"
 description: The second article...
-ogImage: true
+category: Article
 sitemap:
   lastmod: 2026-02-19
   changefreq: monthly

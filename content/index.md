@@ -1,6 +1,7 @@
 ---
 title: KhatastroffiK Portfolio
 description: Some astonishing information on the khatastroffik portfolio...
+category: Web Site
 menuLabel: Home
 menuPosition: 1
 sitemap:

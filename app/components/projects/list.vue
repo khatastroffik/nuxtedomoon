@@ -3,7 +3,9 @@ const { data: projects } = await useAsyncData("projects-list", () => {
   return queryCollection("projects").all();
 });
 
-projects.value?.sort((a, b) => (new Date(b.sitemap.lastmod).getTime()) - new Date(a.sitemap.lastmod).getTime());
+projects.value?.sort((a, b) => {
+  return (b.sitemap?.lastmod && a.sitemap?.lastmod) ? new Date(b.sitemap.lastmod).getTime() - new Date(a.sitemap.lastmod).getTime() : 0;
+});
 </script>
 
 <template>

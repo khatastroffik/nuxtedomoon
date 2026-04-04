@@ -1,15 +1,27 @@
 import tailwindcss from "@tailwindcss/vite";
 import { defineNuxtConfig } from "nuxt/config";
 
-// eslint-disable-next-line node/prefer-global/process
-const NUXT_APP_BASE_URL = process.env.NUXT_APP_BASE_URL ?? "";
+const SITE_URL: string = import.meta.env.NUXT_PUBLIC_SITE_URL || "http://localhost:3000";
+const BASE_URL: string = import.meta.env.NUXT_APP_BASE_URL || "";
+const LOGO_URL = "/logo.png";
 
-const _url = "https://khatastroffik.github.io";
-const _logo = `/apple-icon-144x144.png`;
+const cleanBaseUrl = BASE_URL.endsWith("/") ? BASE_URL.slice(0, -1) : BASE_URL;
+
+function urlFromPath(path: string) {
+  return new URL(cleanBaseUrl + path, SITE_URL).href;
+}
 
 export default defineNuxtConfig({
   app: {
+    baseURL: BASE_URL,
+    head: { link: [
+      { rel: "icon", type: "image/x-icon", href: `${cleanBaseUrl}/favicon.ico` },
+      { rel: "preload", as: "image", type: "image/jpg", href: `${cleanBaseUrl}/cover.jpg`, fetchpriority: "high" },
+    ] },
     pageTransition: { name: "page", mode: "out-in" },
+  },
+  nitro: {
+    prerender: { crawlLinks: true, routes: ["/"] },
   },
   routeRules: {
     "/": { appLayout: false }, // Landing Page specific setting !
@@ -17,57 +29,20 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   typescript: { typeCheck: false }, // https://github.com/fi3ework/vite-plugin-checker/issues/557
-  modules: ["@nuxtjs/seo", "@nuxt/content", "@nuxt/icon", "@nuxt/image", "@nuxtjs/color-mode"],
+  modules: ["@nuxtjs/seo", "@nuxt/content", "@nuxt/icon", "@nuxt/image", "@nuxtjs/color-mode", "@nuxt/fonts"],
   css: ["~/assets/style/main.css"],
   content: {
     watch: { enabled: true },
     renderer: { anchorLinks: { h2: true, h3: true, h4: false } },
     build: { markdown: { toc: { depth: 3, searchDepth: 3 } } },
   },
-  // VITE
   vite: {
     plugins: [tailwindcss()],
-    optimizeDeps: {
-      include: [
-        "@vueuse/core",
-        "@nuxtjs/mdc",
-      ],
-    },
-
   },
-  // SITE-CONFIG
-  site: {
-    url: _url,
-    name: "K11K",
-    defaultLocale: "en",
-    logo: _logo,
+  icon: {
+    mode: "css",
+    cssLayer: "base",
   },
-  // SITEMAP
-  sitemap: { zeroRuntime: true },
-  // ROBOTS
-  robots: {
-    robotsTxt: !(NUXT_APP_BASE_URL.length > 1),
-    disallow: [],
-    groups: [{ userAgent: ["GPTBot", "ChatGPT-User"], disallow: ["/"] }],
-  },
-  // OG-IMAGE
-  ogImage: {
-    zeroRuntime: true,
-    defaults: { component: "k11k", cacheMaxAgeSeconds: 60 * 60 * 24 * 3 },
-    compatibility: { prerender: { chromium: false } }, // disable chromium dependency for prerendering (skips the chromium install in CIs)
-  },
-  // SCHEMA-ORG
-  schemaOrg: {
-    identity: {
-      type: "Person",
-      name: "Loïs Bégué",
-      image: "/avatar.jpg",
-      url: _url,
-    },
-  },
-  // LINK-CHECKER
-  linkChecker: { failOnError: true },
-  icon: { mode: "css", cssLayer: "base" },
   image: {
     format: ["webp"],
     presets: {
@@ -98,5 +73,52 @@ export default defineNuxtConfig({
     preference: "dark",
     dataValue: "theme",
     fallback: "dark",
+  },
+
+  // NUXT-SEO :: SITE-CONFIG
+  site: {
+    url: SITE_URL,
+    name: "K11K",
+    description: "Nuxtedo-Moon is a responsive portfolio/blog static web page template designed using Nuxt, Nuxt-Content, Nuxt-SEO, Tailwind CSS and daisyUI.",
+    defaultLocale: "en",
+    logo: LOGO_URL,
+  },
+  // NUXT-SEO :: SITEMAP
+  sitemap: {
+    zeroRuntime: true,
+  },
+  // NUXT-SEO :: ROBOTS
+  robots: {
+    robotsTxt: !BASE_URL,
+    groups: [{ userAgent: ["GPTBot", "ChatGPT-User"], disallow: ["/"] }],
+  },
+  // NUXT-SEO :: OG-IMAGE
+  ogImage: {
+    zeroRuntime: false,
+    compatibility: { prerender: { browser: false } }, // disable chromium dependency for prerendering (skips the chromium install in CIs)
+  },
+  // NUXT-SEO :: SCHEMA-ORG
+  schemaOrg: {
+    identity: {
+      type: "Person",
+      name: "Loïs Bégué",
+      image: {
+        "@id": urlFromPath("/#/schema/image/1"),
+        "@type": "ImageObject",
+        "contentUrl": urlFromPath("/avatar.jpg"),
+        "inLanguage": "en",
+        "url": urlFromPath("/avatar.jpg"),
+      },
+      url: SITE_URL,
+    },
+  },
+  // NUXT-SEO :: LINK-CHECKER
+  linkChecker: {
+    failOnError: true,
+  },
+  $development: {
+    site: {
+      url: "http://localhost:3000",
+    },
   },
 });

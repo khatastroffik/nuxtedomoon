@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { staticPagePath, ogImagePath, originalRoute: route } = useStaticPageRoutes();
+const { staticPagePath } = useStaticPageRoutes();
 const spp = toValue(staticPagePath);
 
 const { data: page } = await useAsyncData(`page-${spp}`, () => {
@@ -7,24 +7,29 @@ const { data: page } = await useAsyncData(`page-${spp}`, () => {
 });
 
 if (!page.value) {
-  console.error(`Page not found\nPATH=${route.path}\nFULLPATH=${route.fullPath}`);
   throw createError({ statusCode: 404, statusText: "Page not found", fatal: true });
 }
 
-useSurroundings(queryCollectionItemSurroundings("pages", route.path, { fields: ["menuPosition", "menuLabel"] }).order("menuPosition", "ASC"));
+useSurroundings(queryCollectionItemSurroundings("pages", spp, { fields: ["menuPosition", "menuLabel"] }).order("menuPosition", "ASC"));
 
-defineOgImage();
+const ogImageComponentProps = { title: page.value.title, description: page.value.description, category: page.value.category };
+const { data: ogImagePath } = await useAsyncData(`ogimage-${spp}`, async () => {
+  return Promise.resolve(defineOgImage("K11k.takumi", ogImageComponentProps)[0]);
+});
+
+const ogImageAlt = `Social Media Card of the page: ${page.value.title}`;
 
 useSeoMeta({
   title: page.value.title,
   description: page.value.description,
-  ogImage: ogImagePath,
+  ogImage: ogImagePath.value,
+  ogImageAlt,
   twitterTitle: page.value.title,
   twitterDescription: page.value.description,
-  twitterImage: ogImagePath,
+  twitterCreator: "K11K",
+  twitterImage: ogImagePath.value,
+  twitterImageAlt: ogImageAlt,
 });
-
-useHead({ link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }] });
 </script>
 
 <template>

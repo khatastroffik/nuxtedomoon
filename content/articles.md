@@ -1,6 +1,7 @@
 ---
 title: KhatastroffiK Articles
 description: Some writting on software development ...
+category: Articles
 menuLabel: Articles
 menuPosition: 10
 sitemap:

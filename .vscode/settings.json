@@ -14,7 +14,22 @@
   "editor.quickSuggestions": { "strings": "on" },
   "tailwindCSS.classAttributes": ["class", ":class"],
   "tailwindCSS.classFunctions": ["tw"],
+  "tailwindCSS.files.exclude": [
+    "**/.git/**",
+    "**/node_modules/**",
+    "**/.hg/**",
+    "**/.svn/**",
+    "**/.output/**",
+    "**/.nuxt/**",
+    "**/dist/**"
+  ],
 
+  "files.exclude": {
+    ".data": true,
+    ".nuxt": true,
+    ".output": true,
+    "dist": true
+  },
   // Silent the stylistic rules in your IDE, but still auto fix them
   "eslint.rules.customizations": [
     { "rule": "style/*", "severity": "off", "fixable": true },
@@ -27,7 +42,6 @@
     { "rule": "*-newline", "severity": "off", "fixable": true },
     { "rule": "*quotes", "severity": "off", "fixable": true },
     { "rule": "*semi", "severity": "off", "fixable": true }
-
   ],
 
   // Enable eslint for all supported languages
@@ -58,5 +72,12 @@
   "nuxtr.defaultPackageManager": "pnpm",
   "nuxtr.openItemsAfterCreation": true,
   "nuxtr.vueFiles.firstTag": "script",
-  "nuxtr.vueFiles.style.addStyleTag": false
+  "nuxtr.vueFiles.style.addStyleTag": false,
+  "explorer.excludeGitIgnore": false,
+  "search.exclude": {
+    ".data": true,
+    ".nuxt": true,
+    ".output": true,
+    "dist": true
+  }
 }
