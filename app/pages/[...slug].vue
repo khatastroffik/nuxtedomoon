@@ -33,8 +33,5 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
-    <OgimageOutput :src="ogImagePath" />
-    <ContentRenderer v-if="page" :value="page" tag="main">no no no</ContentRenderer>
-  </div>
+  <ContentRenderer v-if="page" :value="page" tag="main">no no no</ContentRenderer>
 </template>

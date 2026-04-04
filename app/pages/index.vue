@@ -185,10 +185,12 @@ useSeoMeta({
       </div>
 
       <!-- DIVIDER - OG-IMAGE -->
+      <!--
       <Divider class="mb-0">OG-Image</Divider>
       <div class="mt-8">
         <OgimageOutput :src="ogImagePath" />
       </div>
+      -->
 
       <!-- DIVIDER - FOOTER -->
       <Divider class="mb-0">Footer</Divider>
