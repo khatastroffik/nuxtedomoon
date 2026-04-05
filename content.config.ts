@@ -14,6 +14,7 @@ export default defineContentConfig({
           category: z.string(),
           menuLabel: z.string(),
           menuPosition: z.number(),
+          readingTime: z.number().optional(),
           ogImage: defineOgImageSchema(),
           sitemap: defineSitemapSchema (),
           robots: defineRobotsSchema(),
@@ -28,6 +29,7 @@ export default defineContentConfig({
         source: "articles/*.md",
         schema: z.object({
           category: z.string(),
+          readingTime: z.number().optional(),
           robots: defineRobotsSchema(),
           sitemap: defineSitemapSchema (),
           ogImage: defineOgImageSchema(),
@@ -42,6 +44,7 @@ export default defineContentConfig({
         source: "projects/*.md",
         schema: z.object({
           category: z.string(),
+          readingTime: z.number().optional(),
           robots: defineRobotsSchema(),
           sitemap: defineSitemapSchema (),
           ogImage: defineOgImageSchema(),

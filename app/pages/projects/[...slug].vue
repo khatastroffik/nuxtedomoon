@@ -44,5 +44,8 @@ useSeoMeta({
 </script>
 
 <template>
-  <ContentRenderer v-if="page" :value="page" tag="main" />
+  <article>
+    <ReadingTime :minutes="page?.readingTime" class="text-sm font-light text-secondary" />
+    <ContentRenderer v-if="page" :value="page" tag="main" />
+  </article>
 </template>

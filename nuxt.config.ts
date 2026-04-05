@@ -1,10 +1,10 @@
 import tailwindcss from "@tailwindcss/vite";
 import { defineNuxtConfig } from "nuxt/config";
+import { getReadingTime } from "./app/utils/reading-time";
 
 const SITE_URL: string = import.meta.env.NUXT_PUBLIC_SITE_URL || "http://localhost:3000";
 const BASE_URL: string = import.meta.env.NUXT_APP_BASE_URL || "";
 const LOGO_URL = "/logo.png";
-
 const cleanBaseUrl = BASE_URL.endsWith("/") ? BASE_URL.slice(0, -1) : BASE_URL;
 
 function urlFromPath(path: string) {
@@ -120,6 +120,13 @@ export default defineNuxtConfig({
   $development: {
     site: {
       url: "http://localhost:3000",
+    },
+  },
+  hooks: {
+    "content:file:afterParse": function (ctx) {
+      const { file, content } = ctx;
+      const text = typeof file.body === "string" ? file.body : "";
+      content.readingTime = getReadingTime(text);
     },
   },
 });
