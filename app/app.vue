@@ -1,9 +1,17 @@
 <script setup lang="ts">
 useBreadcrumbItems({ overrides: [{ label: "Home", ariaLabel: "Home" }] });
+const color = "var(--color-primary)";
+const errorColor = "var(--color-error)";
 </script>
 
 <template>
   <div>
+    <NuxtLoadingIndicator
+      :throttle="100"
+      :color="color"
+      :error-color="errorColor"
+      :duration="1250"
+      :height="2" />
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
