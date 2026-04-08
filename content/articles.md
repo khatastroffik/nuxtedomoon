@@ -1,6 +1,6 @@
 ---
 title: KhatastroffiK Articles
-description: Some writting on software development ...
+description: Writings on software development, project management, information theorie etc.
 category: Articles
 menuLabel: Articles
 menuPosition: 10
@@ -10,8 +10,8 @@ sitemap:
   priority: 0.8
 ---
 
-# List of articles
+# {{ $doc.title }}
 
-These are the latest articles that have been published so far:
+These are the latest articles that have been published so far.
 
-...
+:ArticlesList

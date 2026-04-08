@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-
+const stroked = useIconStrokeWidth(1.4);
 </script>
 
 <template>
@@ -11,14 +11,14 @@
           to="https://de.linkedin.com/in/loisbegue"
           aria-label="visit my linkedin profile page"
           target="_blank">
-          <Icon name="tabler:brand-linkedin" class="h-6 w-6" />
+          <Icon name="tabler:brand-linkedin" class="h-6 w-6" :customize="stroked" />
         </NuxtLink>
         <NuxtLink
           class="hover:text-accent"
           to="https://github.com/khatastroffik"
           aria-label="visit my github profile page"
           target="_blank">
-          <Icon name="tabler:brand-github" class="h-6 w-6" />
+          <Icon name="tabler:brand-github" class="h-6 w-6" :customize="stroked" />
         </NuxtLink>
       </div>
       <p>

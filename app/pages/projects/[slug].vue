@@ -1,19 +1,18 @@
 <script lang="ts" setup>
 const { staticPagePath } = useStaticPageRoutes();
-const spp = toValue(staticPagePath);
 
-const { data: page } = await useAsyncData(`page-${spp}`, () => {
-  return queryCollection("pages").path(spp).first();
+const { data: page } = await useAsyncData(`projects-${staticPagePath.value}`, () => {
+  return queryCollection("projects").path(staticPagePath.value).first();
 });
 
 if (!page.value) {
   throw createError({ statusCode: 404, statusText: "Page not found", fatal: true });
 }
 
-useSurroundings(queryCollectionItemSurroundings("pages", spp, { fields: ["menuPosition", "menuLabel"] }).order("menuPosition", "ASC"));
+useSurroundings(queryCollectionItemSurroundings("projects", staticPagePath.value));
 
 const ogImageComponentProps = { title: page.value.title, description: page.value.description, category: page.value.category };
-const { data: ogImagePath } = await useAsyncData(`ogimage-${spp}`, async () => {
+const { data: ogImagePath } = await useAsyncData(`ogimage-${staticPagePath.value}`, async () => {
   return Promise.resolve(defineOgImage("K11k.takumi", ogImageComponentProps)[0]);
 });
 
@@ -29,12 +28,13 @@ useSeoMeta({
   twitterCreator: "K11K",
   twitterImage: ogImagePath.value,
   twitterImageAlt: ogImageAlt,
+  articleAuthor: ["K11K"], // [runtimeConfig["nuxt-schema-org"].identity.name],
 });
 </script>
 
 <template>
   <article>
     <ReadingTime :minutes="page?.readingTime" class="text-sm font-light text-secondary" />
-    <ContentRenderer v-if="page" :value="page" tag="main">no no no</ContentRenderer>
+    <ContentRenderer v-if="page" :value="page" tag="main" />
   </article>
 </template>

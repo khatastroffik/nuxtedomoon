@@ -47,7 +47,7 @@ function handleAnchorClick(event: any) {
 
 <template>
   <div class="w-full max-w-7xl" role="main" aria-label="Main content of the page">
-    <div class="prose prose-base h-fit w-full max-w-7xl rounded-lg border border-base-300 bg-base-100 px-12 py-12 xl:prose-lg" :class="{ 'bg-base-100/40': props.translucide }">
+    <div class="prose prose-base h-fit w-full max-w-7xl rounded-lg border border-base-300 bg-base-100 px-12 py-12 " :class="{ 'bg-base-100/40': props.translucide }">
       <slot>
         <BaamOida />
       </slot>
