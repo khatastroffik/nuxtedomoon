@@ -28,6 +28,7 @@ export default defineContentConfig({
         type: "page",
         source: "articles/*.md",
         schema: z.object({
+          cardImage: z.string().default("/article.jpg"),
           category: z.string(),
           readingTime: z.number().optional(),
           robots: defineRobotsSchema(),
@@ -43,6 +44,7 @@ export default defineContentConfig({
         type: "page",
         source: "projects/*.md",
         schema: z.object({
+          cardImage: z.string().default("/article.jpg"),
           category: z.string(),
           readingTime: z.number().optional(),
           robots: defineRobotsSchema(),
