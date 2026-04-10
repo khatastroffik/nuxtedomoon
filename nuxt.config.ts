@@ -95,7 +95,7 @@ export default defineNuxtConfig({
   },
   // NUXT-SEO :: OG-IMAGE
   ogImage: {
-    zeroRuntime: false,
+    zeroRuntime: true,
     compatibility: { prerender: { browser: false } }, // disable chromium dependency for prerendering (skips the chromium install in CIs)
   },
   // NUXT-SEO :: SCHEMA-ORG
