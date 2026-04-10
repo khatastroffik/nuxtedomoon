@@ -43,7 +43,11 @@ watchDebounced(
             <div class="text-sm font-light text-white/70 italic">navigate to</div>
             <p class="mb-2 px-1">&ldquo;&#x202F;{{ prevLinkTo?.title }}&#x202F;&rdquo;</p>
           </div>
-          <NuxtLink :to="prevLinkTo?.path" class="btn btn-circle btn-soft btn-xs hover:text-accent" :class="{ 'btn-disabled': !prevLinkTo }">
+          <NuxtLink
+            :to="prevLinkTo?.path"
+            class="btn btn-circle btn-soft btn-xs hover:text-accent"
+            :class="{ 'btn-disabled': !prevLinkTo }"
+            :aria-label="prevLinkTo?.title">
             <Icon name="tabler:arrow-left" class="h-3 w-3" />
           </NuxtLink>
         </div>
@@ -52,7 +56,11 @@ watchDebounced(
             <div class="text-sm font-light text-white/70 italic">navigate to</div>
             <p class="mb-2 px-1">&laquo;&#x202F;{{ nextLinkTo?.title }}&#x202F;&raquo;</p>
           </div>
-          <NuxtLink :to="nextLinkTo?.path" class="btn btn-circle btn-soft btn-xs hover:text-accent" :class="{ 'btn-disabled': !nextLinkTo }">
+          <NuxtLink
+            :to="nextLinkTo?.path"
+            class="btn btn-circle btn-soft btn-xs hover:text-accent"
+            :class="{ 'btn-disabled': !nextLinkTo }"
+            :aria-label="nextLinkTo?.title">
             <Icon name="tabler:arrow-right" class="h-3 w-3" />
           </NuxtLink>
         </div>

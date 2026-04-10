@@ -16,6 +16,7 @@ export default defineNuxtConfig({
     baseURL: BASE_URL,
     head: { link: [
       { rel: "icon", type: "image/x-icon", href: `${cleanBaseUrl}/favicon.ico` },
+      { rel: "icon", type: "image/png", href: `${cleanBaseUrl}/favicon.png` },
       { rel: "preload", as: "image", type: "image/jpg", href: `${cleanBaseUrl}/cover.jpg`, fetchpriority: "high" },
     ] },
     pageTransition: { name: "page", mode: "out-in" },
