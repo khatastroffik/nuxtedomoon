@@ -85,7 +85,7 @@ useSeoMeta({
         </div>
       </header>
 
-      <div class="my-8 flex h-full w-full max-w-7xl flex-col items-center justify-evenly px-5 xl:flex-row xl:p-2">
+      <div class="mt-8 flex h-full w-full max-w-7xl flex-col items-center justify-evenly px-5 xl:flex-row xl:p-2">
         <div class="text-center text-white xl:text-left">
           <h4 class="text-center text-xl font-semibold xl:text-left xl:text-2xl">
             Welcome to the <khatastroffik class="text-base-content/80" /> portfolio
@@ -102,15 +102,15 @@ useSeoMeta({
               </span>
             </span>
           </h1>
-          <div class="mt-4 h-fit px-4 text-xl lg:text-2xl xl:px-0">
-            <p class="h-fit font-serif text-sm font-light text-white/80 capitalize italic">
-              &ldquo;Powered by passion, ruled by practices, forged by action&rdquo;
+          <div class="mt-2 h-fit px-4 text-xl lg:text-2xl xl:px-0">
+            <p class="mb-2 h-fit font-serif text-sm font-light text-neutral-content/80 capitalize italic">
+              &laquo;&nbsp;Powered by passion, ruled by practices, forged by action&nbsp;&raquo;
             </p>
             <p class="h-fit">
               As an agile full-stack developer with 25+ years of professional engagement, I enjoy to commit myself to compelling, challenging software development projects and teams!
             </p>
           </div>
-          <div class="mt-6 mb-6 flex flex-row items-center justify-center gap-4 xl:mb-2 xl:items-center xl:justify-start">
+          <div class="mt-12 mb-12 flex flex-row items-center justify-center gap-4 xl:mb-0 xl:items-center xl:justify-start">
             <NuxtLink
               to="https://de.linkedin.com/in/loisbegue"
               target="_blank"
@@ -134,7 +134,7 @@ useSeoMeta({
 
       <!-- DIVIDER - STATS -->
       <Divider>Stats</Divider>
-      <div class="flex w-full max-w-7xl flex-wrap justify-evenly gap-2">
+      <div class="grid w-full max-w-7xl auto-cols-auto grid-cols-1 gap-4 px-4 sm:grid-cols-2 xl:grid-cols-4">
         <StatsCard>
           <template #value>25</template>
           <template #description>Years of Experience</template>
@@ -187,7 +187,7 @@ useSeoMeta({
 
       <!-- DIVIDER - QUOTE OF THE DAY -->
       <Divider>Quote of the Day</Divider>
-      <div class="my-2 prose w-fit max-w-7xl rounded-lg border border-base-300 bg-base-100/40 p-4 px-6">
+      <div class="prose w-fit max-w-7xl rounded-lg border border-base-300 bg-base-100/40 p-4 px-6">
         <DailyQuote />
       </div>
 
@@ -200,7 +200,7 @@ useSeoMeta({
       -->
 
       <!-- DIVIDER - FOOTER -->
-      <Divider class="mb-0">Footer</Divider>
+      <Divider>Footer</Divider>
       <PagesFooter />
     </div>
   </div>
