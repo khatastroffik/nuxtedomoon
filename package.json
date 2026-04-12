@@ -1,7 +1,7 @@
 {
   "name": "nuxtedomoon",
   "type": "module",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "private": true,
   "packageManager": "pnpm@10.33.0",
   "description": "Nuxtedo-Moon is a responsive portfolio/blog static web page template designed using Nuxt, Nuxt-Content, Nuxt-SEO, Tailwind CSS and daisyUI.",
