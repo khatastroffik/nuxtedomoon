@@ -1,0 +1,29 @@
+name: Release in GitHub with changelog
+permissions:
+  contents: write
+on:
+  push:
+    tags:
+      - "v*"
+jobs:
+  release:
+    name: ==> GENERATE A RELEASE IN GITHUB <==
+    runs-on: ubuntu-latest
+    steps:
+      - name: == 1/4 == Checkout ========================================
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - name: == 2/4 == Install pnpm ====================================
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - name: == 3/4 == Setup Node v24 ==================================
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: pnpm
+      - name: == 4/4 == Generate Changelog and Create a Release ==================================
+        run: pnpx changelogithub
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

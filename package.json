@@ -43,7 +43,10 @@
     "serve": "pnpx serve .output/public",
     "node": "node .output/server/index.mjs",
     "http": "pnpx http-server .output/public",
-    "http:base": "pnpx https://github.com/http-party/http-server.git#5ec4848383dc10391a8a63ffa52d3b01d111e292 .output/public -c-1 --base-dir nuxtedomoon"
+    "http:base": "pnpx https://github.com/http-party/http-server.git#5ec4848383dc10391a8a63ffa52d3b01d111e292 .output/public -c-1 --base-dir nuxtedomoon",
+    "do:bump": "bumpp --commit \"release v\" --print-commits --all --execute \"git add CHANGELOG.md\"",
+    "do:changelog": "pnpx changelogithub --output CHANGELOG.md",
+    "do:release": "pnpm do:changelog && pnpm do:bump"
   },
   "dependencies": {
     "@iconify-json/tabler": "^1.2.33",
@@ -64,6 +67,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^7.4.3",
+    "bumpp": "^11.0.1",
     "eslint": "^9.39.2",
     "eslint-plugin-format": "^1.4.0",
     "eslint-plugin-tailwindcss": "4.0.0-beta.0",
@@ -75,5 +79,26 @@
   },
   "lint-staged": {
     "*": "pnpm lint"
+  },
+  "changelogithub": {
+    "types": {
+      "feat": { "title": "🚀 Features" },
+      "fix": { "title": "🐞 Bug Fixes" },
+      "perf": { "title": "✨ Performance" },
+      "improve": { "title": "✨ Improvements" },
+      "docs": { "title": "📖 Documentation" },
+      "test": { "title": "⚙️ Tests" },
+      "refactor": { "title": "⚙️ Refactors" },
+      "build": { "title": "⚙️ Build" },
+      "ci": { "title": "⚙️ CI" },
+      "chore": { "title": "⚙️ Chore" }
+    },
+    "excludeTypes": [],
+    "titles": {
+      "breakingChanges": "🚨 Breaking Changes 🚨"
+    },
+    "capitalize": true,
+    "group": true,
+    "emoji": true
   }
 }
