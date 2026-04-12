@@ -4,6 +4,6 @@
 *.mjs linguist-language=TypeScript
 *.md linguist-language=Markdown
 *.vue linguist-language=Vue
-*.yaml linguist-detectable
+*.yaml linguist-vendored
 docs/* linguist-documentation
 public/* linguist-documentation
