@@ -3,7 +3,7 @@ const stroked = useIconStrokeWidth(1.4);
 </script>
 
 <template>
-  <footer class="footer-center mb-4 footer max-w-7xl py-4 sm:footer-horizontal" role="contentinfo" aria-label="Footer containing copyright and links to external profile pages">
+  <footer class="footer-center mb-4 footer max-w-7xl py-4 sm:footer-horizontal" aria-label="Footer containing copyright and links to external profile pages">
     <aside>
       <div class="flex w-full max-w-7xl flex-row items-center justify-center gap-4">
         <NuxtLink

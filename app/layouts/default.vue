@@ -1,6 +1,6 @@
 <template>
   <div class="flex min-h-screen w-full max-w-7xl min-w-screen flex-col items-center gap-2 bg-base-200 px-8 ">
-    <header class="top-0 z-100 mx-auto mt-4 flex h-18 max-h-18 w-full max-w-7xl self-stretch rounded-lg border border-base-300 bg-base-100 p-4 text-base shadow-lg" role="banner" aria-label="Menu bar with logo and links to internal pages">
+    <header class="top-0 z-100 mx-auto mt-4 flex h-18 max-h-18 w-full max-w-7xl self-stretch rounded-lg border border-base-300 bg-base-100 p-4 text-base shadow-lg" aria-label="Menu bar with logo and links to internal pages">
       <div class="flex flex-1 items-center justify-between">
         <brand />
       </div>

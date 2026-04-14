@@ -8,7 +8,9 @@ export default antfu(
   {
     root: true,
     formatters: true,
-    vue: true,
+    vue: {
+      a11y: true,
+    },
     type: "app",
     typescript: true,
     stylistic: {
