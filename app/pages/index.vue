@@ -156,7 +156,7 @@ useSeoMeta({
       <Divider>Main Skills</Divider>
 
       <!-- DIVIDER - Some Text Content -->
-      <Divider>Text Content (prose)</Divider>
+      <!-- <Divider>Text Content (prose)</Divider>
       <Prosit translucide class="px-8 xl:px-0">
         <div>
           <h1>More Prose Content - H1</h1>
@@ -182,7 +182,7 @@ useSeoMeta({
           <p>Qui irure cupidatat cupidatat ad duis tempor irure sint sunt eiusmod et. Laborum fugiat ut laborum reprehenderit. Nulla eiusmod laboris cillum velit culpa magna eu exercitation veniam. Irure sit in est pariatur incididunt amet eu enim mollit tempor ad velit mollit. Aliquip magna in qui non aute eiusmod nostrud ullamco duis elit. Esse id velit exercitation duis consectetur laboris est incididunt proident exercitation. Qui pariatur consectetur adipisicing sint enim occaecat et sunt est elit consequat dolor commodo.</p>
           <p>Officia proident ut adipisicing id duis adipisicing. Mollit voluptate reprehenderit occaecat Lorem ut. Velit amet ut pariatur ad. Occaecat officia dolor ea elit nulla sint id ullamco ut aliquip elit nostrud sunt.</p>
         </div>
-      </Prosit>
+      </Prosit> -->
 
       <!-- DIVIDER - QUOTE OF THE DAY -->
       <Divider>Quote of the Day</Divider>
