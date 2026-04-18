@@ -93,7 +93,7 @@ useSeoMeta({
             <span class="text-rotate text-2xl leading-loose duration-20000 sm:text-3xl md:text-4xl lg:text-5xl">
               <span class="justify-items-stretch">
                 <span class="text-ellipsis text-base-content">Fullstack Software Development</span>
-                <span class="text-ellipsis text-neutral-content">Application Lifecycle Mgt</span>
+                <span class="text-ellipsis text-neutral-content">Application Lifecycle Management</span>
                 <span class="text-ellipsis text-success-content">Software Engineering &amp; DevOps</span>
                 <span class="text-ellipsis text-accent">Agile Coaching</span>
                 <span class="text-ellipsis text-secondary">Best Practices Consultancy</span>
@@ -101,8 +101,8 @@ useSeoMeta({
               </span>
             </span>
           </h1>
-          <div class="mt-2 h-fit px-4 text-xl lg:text-2xl xl:px-0">
-            <p class="mb-2 h-fit font-serif text-sm font-light text-neutral-content/80 capitalize italic">
+          <div class="mt-2 h-fit px-4 text-xl lg:text-2xl xl:mr-4 xl:px-0">
+            <p class="mb-2 h-fit text-sm font-light text-neutral-content/80 capitalize italic">
               &laquo;&nbsp;Powered by passion, ruled by practices, forged by action&nbsp;&raquo;
             </p>
             <p class="h-fit">
