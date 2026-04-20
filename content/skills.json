@@ -1,0 +1,108 @@
+{
+  "programming": {
+    "TypeScript": {
+      "icon": "tabler:brand-typescript",
+      "description": "A strongly typed superset of JavaScript that compiles to plain JavaScript. TypeScript adds static types, classes, and interfaces, making code more predictable and easier to debug, especially in large-scale applications. It is widely used for both frontend and backend development.",
+      "level": "pro"
+    },
+    "Nuxt": {
+      "icon": "tabler:brand-nuxt",
+      "description": "A progressive framework based on Vue.js, designed for building server-side rendered (SSR), static, or single-page applications. Nuxt simplifies routing, state management, and SEO optimization, making it ideal for both small projects and large-scale applications.",
+      "level": "pro"
+    },
+    "Vue": {
+      "icon": "tabler:brand-vue",
+      "description": "A progressive JavaScript framework for building user interfaces, known for its simplicity and flexibility. Vue allows incremental adoption and offers reactive data binding, composable components, and a virtual DOM. It is often praised for its gentle learning curve and detailed documentation.",
+      "level": "pro"
+    },
+    "Angular": {
+      "icon": "tabler:brand-angular",
+      "description": "A comprehensive, TypeScript-based frontend framework developed by Google. Angular provides a complete solution for building single-page applications (SPAs) with features like two-way data binding, dependency injection, and modular architecture. It is known for its robustness and enterprise-level scalability.",
+      "level": "pro"
+    },
+    "React": {
+      "icon": "tabler:brand-react",
+      "description": "A popular JavaScript library for building user interfaces, developed by Meta. React focuses on creating reusable UI components and efficiently updating the DOM using a virtual DOM. It is often used with state management libraries like Redux or context API for complex applications.",
+      "level": "pro"
+    },
+    "Node.js": {
+      "icon": "tabler:brand-nodejs",
+      "description": "A JavaScript runtime built on Chrome’s V8 engine, enabling server-side and networking applications. Node.js uses an event-driven, non-blocking I/O model, making it lightweight and efficient for real-time applications like chat servers and APIs.",
+      "level": "pro"
+    },
+    "Nest.Js": {
+      "icon": "simple-icons:nestjs",
+      "description": "A progressive Node.js framework for building efficient, scalable server-side applications. NestJS uses TypeScript and combines elements of OOP, FP, and FRP, inspired by Angular’s architecture. It is ideal for creating microservices and enterprise-grade backends.",
+      "level": "pro"
+    },
+    "Express.Js": {
+      "icon": "simple-icons:express",
+      "description": "A minimal and flexible Node.js web application framework, providing a robust set of features for web and mobile applications. Express simplifies routing, middleware integration, and handling HTTP requests, making it a popular choice for APIs and web servers.",
+      "level": "pro"
+    },
+    "HTML5": {
+      "icon": "tabler:brand-html5",
+      "description": "The fifth and latest major version of the HyperText Markup Language, the standard language for creating web pages. HTML5 introduces new elements (like <video>, <audio>, and <canvas>), APIs for offline storage, geolocation, and drag-and-drop, and improved semantic structure. It is designed to support multimedia and cross-platform mobile applications.",
+      "level": "pro"
+    },
+    "CSS3": {
+      "icon": "tabler:brand-css3",
+      "description": "The latest evolution of the Cascading Style Sheets language, used for styling and laying out web pages. CSS3 introduces new features like animations, transitions, flexbox, grid layout, and custom fonts, enabling more sophisticated and responsive designs. It is modular, allowing developers to use only the features they need.",
+      "level": "pro"
+    },
+    "TailwindCSS": {
+      "icon": "tabler:brand-tailwind",
+      "description": "A utility-first CSS framework that enables rapid UI development by providing low-level utility classes. Tailwind allows developers to build custom designs without leaving their HTML, promoting consistency and reducing CSS bloat.",
+      "level": "pro"
+    },
+    "Zod": {
+      "icon": "simple-icons:zod",
+      "description": "A TypeScript-first schema validation library, used to define and validate the shape of data at runtime. Zod ensures type safety and data integrity, making it useful for API request/response validation, form data, and configuration objects.",
+      "level": "pro"
+    }
+  },
+
+  "QA": {
+    "Jest": {
+      "icon": "simple-icons:jest",
+      "description": "A popular JavaScript testing framework developed by Meta, focused on simplicity and support for large web applications. Jest provides built-in code coverage, mocking, and snapshot testing, and is widely used for unit and integration testing in React, Node.js, and other JavaScript projects.",
+      "level": "pro"
+    },
+    "Vitest": {
+      "icon": "simple-icons:vitest",
+      "description": "A fast, modern unit testing framework designed for Vite-based projects, offering a Jest-compatible API. Vitest leverages Vite’s native ES module support for near-instant test execution and hot module replacement. It is ideal for projects using Vue, React, or Svelte with Vite.",
+      "level": "pro"
+    },
+    "Cypress": {
+      "icon": "simple-icons:cypress",
+      "description": "An end-to-end testing framework for web applications, enabling developers to write, run, and debug tests in the browser. Cypress provides real-time reloading, automatic waiting, and a rich dashboard for test visualization. It is known for its developer-friendly API and ability to test both frontend and backend interactions.",
+      "level": "pro"
+    },
+    "SonarQube": {
+      "icon": "simple-icons:sonarqube",
+      "description": "An open-source platform for continuous inspection of code quality, security, and maintainability. SonarQube integrates with CI/CD pipelines to analyze code for bugs, vulnerabilities, and code smells across multiple programming languages. It helps teams enforce coding standards and improve software quality.",
+      "level": "pro"
+    },
+    "Playwright": {
+      "icon": "simple-icons:playwright",
+      "description": "A Node.js library for automating web browsers, developed by Microsoft, supporting Chromium, Firefox, and WebKit. Playwright is used for end-to-end testing, web scraping, and browser automation, offering cross-browser and cross-platform capabilities. It is known for its reliability, speed, and modern API.",
+      "level": "pro"
+    },
+    "Storybook": {
+      "icon": "simple-icons:storybook",
+      "description": "An open-source tool for developing UI components in isolation, supporting React, Vue, Angular, and other frameworks. Storybook allows developers to document, test, and showcase components independently of the main application. It is widely used for building design systems and improving component-driven development.",
+      "level": "pro"
+    },
+    "OWASP": {
+      "icon": "simple-icons:owasp",
+      "description": "The Open Web Application Security Project, a nonprofit foundation focused on improving software security. OWASP provides resources like the OWASP Top Ten, a list of the most critical web application security risks, and tools for testing and securing applications. It is a key reference for developers and security professionals.",
+      "level": "pro"
+    },
+    "Sentry": {
+      "icon": "simple-icons:sentry",
+      "description": "An open-source error tracking and monitoring platform that helps developers identify, triage, and fix issues in real time. Sentry captures errors, exceptions, and performance data across web, mobile, and backend applications. It integrates with most programming languages and frameworks, providing actionable insights for improving application reliability.",
+      "level": "pro"
+    }
+  }
+
+}
