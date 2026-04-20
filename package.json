@@ -49,6 +49,8 @@
     "do:release": "pnpm do:changelog && pnpm do:bump"
   },
   "dependencies": {
+    "@iconify-json/lucide": "^1.2.102",
+    "@iconify-json/simple-icons": "^1.2.79",
     "@iconify-json/tabler": "^1.2.33",
     "@nuxt/content": "^3.12.0",
     "@nuxt/fonts": "0.14.0",
@@ -83,16 +85,36 @@
   },
   "changelogithub": {
     "types": {
-      "feat": { "title": "🚀 Features" },
-      "fix": { "title": "🐞 Bug Fixes" },
-      "perf": { "title": "✨ Performance" },
-      "improve": { "title": "✨ Improvements" },
-      "docs": { "title": "📖 Documentation" },
-      "test": { "title": "⚙️ Tests" },
-      "refactor": { "title": "⚙️ Refactors" },
-      "build": { "title": "⚙️ Build" },
-      "ci": { "title": "⚙️ CI" },
-      "chore": { "title": "⚙️ Chore" }
+      "feat": {
+        "title": "🚀 Features"
+      },
+      "fix": {
+        "title": "🐞 Bug Fixes"
+      },
+      "perf": {
+        "title": "✨ Performance"
+      },
+      "improve": {
+        "title": "✨ Improvements"
+      },
+      "docs": {
+        "title": "📖 Documentation"
+      },
+      "test": {
+        "title": "⚙️ Tests"
+      },
+      "refactor": {
+        "title": "⚙️ Refactors"
+      },
+      "build": {
+        "title": "⚙️ Build"
+      },
+      "ci": {
+        "title": "⚙️ CI"
+      },
+      "chore": {
+        "title": "⚙️ Chore"
+      }
     },
     "excludeTypes": [],
     "titles": {

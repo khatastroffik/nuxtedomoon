@@ -154,6 +154,70 @@ useSeoMeta({
 
       <!-- DIVIDER - MAIN SKILLS -->
       <Divider>Main Skills</Divider>
+      <SkillsCategory label="Programming">
+        <SkillCard skill="TypeScript" skill-icon="tabler:brand-typescript" />
+        <SkillCard skill="Nuxt" skill-icon="tabler:brand-nuxt" />
+        <SkillCard skill="Vue" skill-icon="tabler:brand-vue" />
+        <SkillCard skill="Angular" skill-icon="tabler:brand-angular" />
+        <SkillCard skill="React" skill-icon="tabler:brand-react" />
+        <SkillCard skill="Node.js" skill-icon="tabler:brand-nodejs" />
+        <SkillCard skill="Nest.Js" skill-icon="simple-icons:nestjs" />
+        <SkillCard skill="Express.Js" skill-icon="simple-icons:express" />
+        <SkillCard skill="TailwindCSS" skill-icon="tabler:brand-tailwind" />
+        <SkillCard skill="Zod" skill-icon="simple-icons:zod" />
+        <SkillCard skill="(more)" skill-icon="tabler:dots" />
+      </SkillsCategory>
+      <SkillsCategory label="QA">
+        <SkillCard skill="Jest" skill-icon="simple-icons:jest" />
+        <SkillCard skill="Vitest" skill-icon="simple-icons:vitest" />
+        <SkillCard skill="Cypress" skill-icon="simple-icons:cypress" />
+        <SkillCard skill="SonarQube" skill-icon="simple-icons:sonarqube" />
+        <SkillCard skill="Playwright" skill-icon="simple-icons:playwright" />
+        <SkillCard skill="Storybook" skill-icon="simple-icons:storybook" />
+        <SkillCard skill="OWASP" skill-icon="simple-icons:owasp" />
+        <SkillCard skill="Sentry" skill-icon="simple-icons:sentry" />
+        <SkillCard skill="(more)" skill-icon="tabler:dots" />
+      </SkillsCategory>
+      <!-- <SkillsCategory label="Methodology"> -->
+      <!-- <SkillCard brand="Scrum" brand-icon="tabler:question-circle" /> -->
+      <SkillsCategory label="Practices">
+        <SkillCard skill="CleanCode" skill-icon="lucide:brush-cleaning" />
+        <SkillCard skill="OpenApi" skill-icon="simple-icons:openapiinitiative" />
+        <SkillCard skill="JSON-Schema" skill-icon="tabler:schema" />
+        <SkillCard skill="RESTfull" skill-icon="tabler:api-app" />
+        <SkillCard skill="GraphQL" skill-icon="simple-icons:graphql" />
+        <SkillCard skill="Web Tokens" skill-icon="simple-icons:jsonwebtokens" />
+        <SkillCard skill="Conv. Commits" skill-icon="simple-icons:conventionalcommits" />
+        <SkillCard skill="SemVer" skill-icon="simple-icons:semver" />
+        <SkillCard skill="UML" skill-icon="simple-icons:uml" />
+        <SkillCard skill="(more)" skill-icon="tabler:dots" />
+      </SkillsCategory>
+
+      <!-- </div> -->
+      <!-- <SkillsCategory label="Engineering">
+      <SkillCard brand="npm" brand-icon="tabler:brand-npm" />
+      <SkillCard brand="pnpm" brand-icon="tabler:brand-pnpm" />
+      <SkillCard brand="Docker" brand-icon="tabler:brand-docker" />
+      <SkillCard brand="Git" brand-icon="tabler:brand-git" />
+      <SkillCard brand="GitHub" brand-icon="tabler:brand-github" />
+      <SkillCard brand="GitLab" brand-icon="tabler:brand-gitlab" />
+      <SkillCard brand="Bitbucket" brand-icon="tabler:brand-bitbucket" />
+      <SkillCard brand="Sonatype" brand-icon="simple-icons:sonatype" />
+      </SkillsCategory> -->
+
+      <SkillsCategory label="Application Management">
+        <SkillCard skill="JIRA" skill-icon="simple-icons:jira" />
+        <SkillCard skill="Confluence" skill-icon="simple-icons:confluence" />
+        <SkillCard skill="Bitbucket" skill-icon="tabler:brand-bitbucket" />
+        <SkillCard skill="npm" skill-icon="tabler:brand-npm" />
+        <SkillCard skill="pnpm" skill-icon="tabler:brand-pnpm" />
+        <SkillCard skill="Docker" skill-icon="tabler:brand-docker" />
+        <SkillCard skill="Git" skill-icon="tabler:brand-git" />
+        <SkillCard skill="GitHub" skill-icon="tabler:brand-github" />
+        <SkillCard skill="GitLab" skill-icon="tabler:brand-gitlab" />
+        <SkillCard skill="Sonatype" skill-icon="simple-icons:sonatype" />
+        <SkillCard skill="(more)" skill-icon="tabler:dots" />
+      </SkillsCategory>
 
       <!-- DIVIDER - Some Text Content -->
       <!-- <Divider>Text Content (prose)</Divider>
