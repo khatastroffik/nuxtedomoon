@@ -143,7 +143,7 @@ useSeoMeta({
           <template #description>Project Contributions</template>
         </StatsCard>
         <StatsCard>
-          <template #value>7</template>
+          <template #value>5</template>
           <template #description>Programming Languages</template>
         </StatsCard>
         <StatsCard>
@@ -152,8 +152,78 @@ useSeoMeta({
         </StatsCard>
       </div>
 
-      <!-- DIVIDER - MAIN SKILLS -->
-      <Divider>Main Skills</Divider>
+      <!-- DIVIDER - Top SKILLS -->
+      <Divider>Top Skills</Divider>
+
+      <SkillsCategory label="Programming">
+        <SkillCard skill="TypeScript" icon="tabler:brand-typescript" />
+        <SkillCard skill="Nuxt" icon="tabler:brand-nuxt" />
+        <SkillCard skill="Vue" icon="tabler:brand-vue" />
+        <SkillCard skill="Angular" icon="tabler:brand-angular" />
+        <SkillCard skill="React" icon="tabler:brand-react" />
+        <SkillCard skill="Node.js" icon="tabler:brand-nodejs" />
+        <SkillCard skill="Nest.Js" icon="simple-icons:nestjs" />
+        <SkillCard skill="Express.Js" icon="simple-icons:express" />
+        <SkillCard skill="TailwindCSS" icon="tabler:brand-tailwind" />
+        <SkillCard skill="Zod" icon="simple-icons:zod" />
+        <SkillCard skill="RxJs" icon="devicon-plain:rxjs" /><!-- ??? ADD ICON PACKAGE ??? -->
+        <SkillCard skill="DaisyUI" icon="simple-icons:daisyui" />
+        <SkillCard skill="HTML5" icon="tabler:brand-html5" />
+        <SkillCard skill="CSS3" icon="tabler:brand-css3" />
+        <SkillCard skill="Drizzle" icon="simple-icons:drizzle" />
+        <SkillCard skill="TanStack" icon="simple-icons:tanstack" />
+      </SkillsCategory>
+
+      <SkillsCategory label="QA">
+        <SkillCard skill="Jest" icon="simple-icons:jest" />
+        <SkillCard skill="Vitest" icon="simple-icons:vitest" />
+        <SkillCard skill="Cypress" icon="simple-icons:cypress" />
+        <SkillCard skill="SonarQube" icon="simple-icons:sonarqube" />
+        <SkillCard skill="Playwright" icon="simple-icons:playwright" />
+        <SkillCard skill="Storybook" icon="simple-icons:storybook" />
+        <SkillCard skill="OWASP" icon="simple-icons:owasp" />
+        <SkillCard skill="Sentry" icon="simple-icons:sentry" />
+      </SkillsCategory>
+
+      <SkillsCategory label="Best Practices &amp; Methodology">
+        <SkillCard skill="Scrum" icon="iconoir:agile" />
+        <SkillCard skill="Kanban" icon="tabler:layout-kanban" />
+        <SkillCard skill="CIP" icon="solar:repeat-broken" /> <!-- ??? ADD ICON PACKAGE ??? -->
+        <SkillCard skill="CleanCode" icon="lucide:brush-cleaning" />
+        <SkillCard skill="OpenApi" icon="simple-icons:openapiinitiative" />
+        <SkillCard skill="JSON-Schema" icon="tabler:schema" />
+        <!-- <SkillCard skill="JSON-Schema" skill-icon="vscode-icons:file-type-json-schema" /> -->
+        <!-- <SkillCard skill="JSON-Schema" skill-icon="catppuccin:json-schema" /> -->
+        <SkillCard skill="RESTfull" icon="tabler:api-app" />
+        <SkillCard skill="GraphQL" icon="simple-icons:graphql" />
+        <SkillCard skill="Web Tokens" icon="simple-icons:jsonwebtokens" />
+        <SkillCard skill="Linting" icon="simple-icons:eslint" />
+        <SkillCard skill="Conv. Commits" icon="simple-icons:conventionalcommits" />
+        <SkillCard skill="SemVer" icon="simple-icons:semver" />
+        <SkillCard skill="SEO" icon="tabler:seo" />
+        <SkillCard skill="ISO/DIN" icon="carbon:iso" /> <!-- ??? ADD ICON PACKAGE ??? -->
+        <SkillCard skill="GDPR" icon="streamline-ultimate:coding-apps-website-gdpr-shield" /> <!-- ??? ADD ICON PACKAGE ??? -->
+        <SkillCard skill="BPM/UML" icon="simple-icons:uml" />
+      </SkillsCategory>
+
+      <SkillsCategory label="Application Management">
+        <SkillCard skill="JIRA" icon="simple-icons:jira" />
+        <SkillCard skill="Confluence" icon="simple-icons:confluence" />
+        <SkillCard skill="Bitbucket" icon="tabler:brand-bitbucket" />
+        <SkillCard skill="npm" icon="tabler:brand-npm" />
+        <SkillCard skill="pnpm" icon="tabler:brand-pnpm" />
+        <SkillCard skill="Docker" icon="tabler:brand-docker" />
+        <SkillCard skill="Git" icon="tabler:brand-git" />
+        <SkillCard skill="GitHub" icon="tabler:brand-github" />
+        <SkillCard skill="GitLab" icon="tabler:brand-gitlab" />
+        <SkillCard skill="JAMstack" icon="simple-icons:jamstack" />
+        <SkillCard skill="CI/CD" icon="carbon:continuous-deployment" /> <!-- ??? ADD ICON PACKAGE ??? -->
+        <SkillCard skill="Jenkins" icon="simple-icons:jenkins" />
+        <SkillCard skill="gh-actions" icon="devicon-plain:githubactions" /> <!-- ??? ADD ICON PACKAGE ??? -->
+        <SkillCard skill="Traefik" icon="simple-icons:traefikproxy" />
+        <SkillCard skill="Caddy" icon="simple-icons:caddy" />
+        <SkillCard skill="Sonatype" icon="simple-icons:sonatype" />
+      </SkillsCategory>
 
       <!-- DIVIDER - Some Text Content -->
       <!-- <Divider>Text Content (prose)</Divider>
