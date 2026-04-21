@@ -39,7 +39,36 @@ export default defineNuxtConfig({
     build: { markdown: { toc: { depth: 3, searchDepth: 3 } } },
   },
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [
+      tailwindcss(),
+      { // Remove Tailwind Css Vite build warning - see: https://github.com/tailwindlabs/tailwindcss/discussions/16119#discussioncomment-12758373
+        apply: "build",
+        name: "vite-plugin-ignore-sourcemap-warnings",
+        configResolved(config) {
+          const originalOnWarn = config.build.rollupOptions.onwarn;
+          config.build.rollupOptions.onwarn = (warning, warn) => {
+            if (
+              warning.code === "SOURCEMAP_BROKEN"
+              && (warning.plugin === "@tailwindcss/vite:generate:build" || warning.plugin === "nuxt:module-preload-polyfill")
+            ) {
+              return;
+            }
+
+            if (originalOnWarn) {
+              originalOnWarn(
+                warning,
+                warn,
+              );
+            }
+            else {
+              warn(
+                warning,
+              );
+            }
+          };
+        },
+      },
+    ],
   },
   icon: {
     mode: "css",
