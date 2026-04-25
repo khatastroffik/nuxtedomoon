@@ -1,7 +1,7 @@
 <!-- eslint-disable tailwindcss/no-custom-classname -->
 <script setup lang="ts">
-import { useSiteConfig } from "#site-config/app/composables/useSiteConfig";
 import { computed } from "vue";
+import { useSiteConfig } from "#site-config/app/composables/useSiteConfig";
 
 defineProps({
   title: {

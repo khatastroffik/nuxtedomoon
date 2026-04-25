@@ -13,10 +13,7 @@ onMounted(async () => {
   }
 });
 function randomChars(length: number) {
-  return Array.from(
-    { length },
-    () => charset[Math.floor(Math.random() * charset.length)],
-  ).join("");
+  return Array.from({ length }).map(() => charset[Math.floor(Math.random() * charset.length)]).join("");
 }
 watch(
   () => displayText.value,

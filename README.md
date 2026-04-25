@@ -5,17 +5,17 @@
 ![screenshot of the portfolio landing page](./docs/nuxtedomoon.webp)
 
 <p align="center">
-<img src="https://img.shields.io/github/package-json/dependency-version/khatastroffik/nuxtedomoon/nuxt/main?style=flat&logo=nuxt&labelColor=black">
-&nbsp;&nbsp;<img src="https://img.shields.io/github/package-json/dependency-version/khatastroffik/nuxtedomoon/%40nuxt%2Fcontent/main?style=flat&logo=nuxt&labelColor=black">
-&nbsp;&nbsp;<img src="https://img.shields.io/github/package-json/dependency-version/khatastroffik/nuxtedomoon/%40nuxtjs%2Fseo/main?style=flat&logo=nuxt&labelColor=black">
-&nbsp;&nbsp;<img src="https://img.shields.io/github/package-json/dependency-version/khatastroffik/nuxtedomoon/tailwindcss/main?style=flat&logo=tailwindcss&labelColor=black">
+<img src="https://img.shields.io/github/package-json/dependency-version/khatastroffik/nuxtedomoon/nuxt/main?style=flat&logo=nuxt&labelColor=black" alt="Nuxt Version">
+&nbsp;&nbsp;<img src="https://img.shields.io/github/package-json/dependency-version/khatastroffik/nuxtedomoon/%40nuxt%2Fcontent/main?style=flat&logo=nuxt&labelColor=black" alt="Nuxt Content Version">
+&nbsp;&nbsp;<img src="https://img.shields.io/github/package-json/dependency-version/khatastroffik/nuxtedomoon/%40nuxtjs%2Fseo/main?style=flat&logo=nuxt&labelColor=black" alt="Nuxt SEO version">
+&nbsp;&nbsp;<img src="https://img.shields.io/github/package-json/dependency-version/khatastroffik/nuxtedomoon/tailwindcss/main?style=flat&logo=tailwindcss&labelColor=black" alt=""Tailwindcss Version>
 </p>
 
 <p align="center">
-<img src="https://img.shields.io/github/package-json/dependency-version/khatastroffik/nuxtedomoon/daisyui/main?style=flat&logo=daisyui&labelColor=black">
-&nbsp;&nbsp;<img src="https://img.shields.io/github/package-json/dependency-version/khatastroffik/nuxtedomoon/dev/typescript?logo=typescript&logoColor=yellow&labelColor=black">
-&nbsp;&nbsp;<img src="https://img.shields.io/github/package-json/dependency-version/khatastroffik/nuxtedomoon/dev/eslint?logo=eslint&logoColor=yellow&labelColor=black">
-&nbsp;&nbsp;<img src="https://img.shields.io/github/license/khatastroffik/nuxtedomoon?style=flat&labelColor=black&color=darkblue">
+<img src="https://img.shields.io/github/package-json/dependency-version/khatastroffik/nuxtedomoon/daisyui/main?style=flat&logo=daisyui&labelColor=black" alt="DaisyUI Version">
+&nbsp;&nbsp;<img src="https://img.shields.io/github/package-json/dependency-version/khatastroffik/nuxtedomoon/dev/typescript?logo=typescript&logoColor=yellow&labelColor=black" alt="TypeScript Version">
+&nbsp;&nbsp;<img src="https://img.shields.io/github/package-json/dependency-version/khatastroffik/nuxtedomoon/dev/eslint?logo=eslint&logoColor=yellow&labelColor=black" alt="ESlint Version">
+&nbsp;&nbsp;<img src="https://img.shields.io/github/license/khatastroffik/nuxtedomoon?style=flat&labelColor=black&color=darkblue" alt="License">
 </p>
 
 ## Demo
